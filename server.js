@@ -27,6 +27,7 @@ let routes = require("./controllers/thoughts42day_controllers.js");
 
 app.use("/", routes);
 
+
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);
 });
