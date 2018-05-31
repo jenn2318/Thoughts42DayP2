@@ -11,7 +11,7 @@ module.exports = function(app) {
 
     });
 
-    app.get("/thoughttank", function (req, res) {
+    app.get("/archive", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/archive.html"));
 
     });
