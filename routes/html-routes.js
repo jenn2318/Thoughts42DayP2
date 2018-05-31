@@ -1,4 +1,4 @@
-var path = require("path");
+let path = require("path");
 
 //GET Requests...this code will handle when a user visits the home page, thought tank page and archive page
 

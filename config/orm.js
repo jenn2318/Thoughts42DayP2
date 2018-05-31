@@ -1,40 +1,30 @@
-var connection = require("./connection.js");
+//Import the ORM to create functions that will interact with the database.
 
-// Object Relational Mapper (ORM)
+let orm = require("../config/orm.js");
 
-// The ?? signs are for swapping out table or column names
-// The ? signs are for swapping out other values
-// These help avoid SQL injection
-// https://en.wikipedia.org/wiki/SQL_injection
-var orm = {
-    selectWhere: function(tableInput, colToSearch, valOfCol) {
-        var queryString = "SELECT * FROM ?? WHERE ?? = ?";
-        connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
-            if (err) throw err;
-            console.log(result);
+let thought = {
+    all: function(cb) {
+        orm.all("thoughts", function(res) {
+            cb(res);
         });
     },
-    selectAndOrder: function(whatToSelect, table, orderCol) {
-        var queryString = "SELECT ?? FROM ?? ORDER BY ?? DESC";
-        console.log(queryString);
-        connection.query(queryString, [whatToSelect, table, orderCol], function(err, result) {
-            if (err) throw err;
-            console.log(result);
+    // The variables cols and vals are arrays.
+    create: function(cols, vals, cb) {
+        orm.create("thoughts", cols, vals, function(res) {
+            cb(res);
         });
     },
-    findWhoHasMost: function(tableOneCol, tableTwoForeignKey, tableOne, tableTwo) {
-        var queryString =
-            "SELECT ??, COUNT(??) AS count FROM ?? LEFT JOIN ?? ON ??.??= ??.id GROUP BY ?? ORDER BY count DESC LIMIT 1";
-
-        connection.query(
-            queryString,
-            [tableOneCol, tableOneCol, tableOne, tableTwo, tableTwo, tableTwoForeignKey, tableOne, tableOneCol],
-            function(err, result) {
-                if (err) throw err;
-                console.log(result);
-            }
-        );
+    update: function(objColVals, condition, cb) {
+        orm.update("thoughts", objColVals, condition, function(res) {
+            cb(res);
+        });
+    },
+    delete: function(condition, cb) {
+        orm.delete("thoughts", condition, function(res) {
+            cb(res);
+        });
     }
 };
 
-module.exports = orm;
+// Export the database functions for the controller (catsController.js).
+module.exports = thought;

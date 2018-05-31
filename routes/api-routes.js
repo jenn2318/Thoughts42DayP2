@@ -33,15 +33,16 @@ module.exports = function(app) {
     });
 
     // POST route for saving a new post to the form
-    app.post("/api/posts", function(req, res) {
+    app.post("/api/thoughts", function(req, res) {
         console.log(req.body);
         thought.Post.create({
             title: req.body.title,
             body: req.body.body,
             category: req.body.category
+            date: req.body.date
         })
             .then(function(thoughtPost) {
-                res.json(thoughtPost);
+                res.redirect(thoughtPost);
             });
     });
 
