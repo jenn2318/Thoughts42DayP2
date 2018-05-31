@@ -1,5 +1,5 @@
 let expect = require("chai").expect;
-let thoughts = require("../");
+let Thoughts = require("../");
 
 describe("Thoughts", function() {
 
