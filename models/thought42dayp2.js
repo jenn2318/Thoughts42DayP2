@@ -3,7 +3,6 @@ $(document).ready(function(){
 });
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.parallax');
     var instances = M.Parallax.init(elems, options);
@@ -11,6 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Or with jQuery
 
-$(document).ready(function(){
-    $('.parallax').parallax();
-});
+// $(document).ready(function(){
+//     $('.parallax').parallax();
+// });
