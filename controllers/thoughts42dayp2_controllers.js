@@ -37,7 +37,7 @@ module.exports = function(app) {
             res.json('/thoughttank');
         });
     });
-    
+
     //Here will be how to archive a thought
     router.post("/api/thoughttank/archive/:id", function(req, res) {
         thought.updateOne(req.params.id, function(){
