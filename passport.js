@@ -1,5 +1,5 @@
-var passport = require('projects/Thoughts42DayP2/passport')
-    , LocalStrategy = require('passport-local').Strategy;
+// var passport = require('passport')
+//     , LocalStrategy = require('passport-local').Strategy;
 
 passport.use(new LocalStrategy(
     function(username, password, done) {
@@ -15,7 +15,6 @@ passport.use(new LocalStrategy(
         });
     }
 ));
-
 
 
 app.post('/login',
