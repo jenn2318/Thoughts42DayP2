@@ -24,7 +24,7 @@ app.set("view engine", "handlebars");
 // Import routes and give the server access to them.
 let routes = require("./controllers/thoughts42dayp2_controllers.js");
 
-app.use("/", routes);
+app.use("/", router);
 
 
 app.listen(PORT, function() {

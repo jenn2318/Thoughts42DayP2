@@ -16,7 +16,7 @@ let router = express.Router();
 
     // Here we will add a new thought
     router.post("/api/thoughttank/", function(req, res) {
-        thought.insertOne(req.body.thought_name, function(){
+        thought.makeOne(req.body.thought_name, function(){
             res.json('/thoughttank');
         });
     });

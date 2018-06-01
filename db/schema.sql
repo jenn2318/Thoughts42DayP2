@@ -7,6 +7,7 @@ DROP TABLE IF EXISTS thoughts;
 # Create the thoughts table
 CREATE TABLE thoughts (
 id int NOT NULL AUTO_INCREMENT,
+user_name VARCHAR(10) NOT NULL,
 thoughts_name VARCHAR(255) NOT NULL,
 thought_date INTEGER(6) NOT NULL,
 thought_archive DATE NOT NULL,
