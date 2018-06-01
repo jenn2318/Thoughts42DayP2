@@ -1,21 +1,19 @@
-let mysql = require("mysql");
+// Dependencies
+let Sequelize = require("sequelize");
 
-let connection = mysql.createConnection({
+// Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
+let sequelize = new Sequelize("sequelize_chirpy", "root", "", {
     host: "localhost",
     port: 3306,
-    user: "root",
-    password: "MyNewPass",
-    database: "thoughts_db"
-});
-
-// Make connection.
-connection.connect(function(err) {
-    if (err) {
-        console.error("error connecting: " + err.stack);
-        return;
+    dialect: "mysql",
+    pool: {
+        max: 5,
+        min: 0,
+        idle: 10000
     }
-    console.log("connected as id " + connection.threadId);
 });
 
-// Export connection for our ORM to use.
-module.exports = connection;
+
+
+// Exports the connection for other files to use
+module.exports = sequelize;

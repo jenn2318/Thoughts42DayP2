@@ -78,7 +78,22 @@
                         <div class="row">
                             <span class="white-text"class="center-align">Get Started Logging Your Thoughts!</span>
                             <br><br>
-                            <a class="waves-effect waves-light btn-small"><i class="material-icons left">https</i>LOGIN</a>
+                            <!--<a class="waves-effect waves-light btn-small"><i class="material-icons left">https</i>LOGIN</a>-->
+
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a>
+
+                            <!-- Modal Structure -->
+                            <div id="modal1" class="modal">
+                                <div class="modal-content">
+                                    <h4>Modal Header</h4>
+                                    <p>A bunch of text</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <!--<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>-->
+                                    <button data-target="modal1" class="btn modal-trigger">Login</button>
+                                </div>
+                            </div>
                         </div>
 
                     </form>
@@ -95,6 +110,9 @@
         text-shadow: 2px 2px #000000;
 }
      </style>
+
+
+
 </footer>
 
 
