@@ -3,25 +3,8 @@ let path = require("path");
 let express = require('express');
 let router = express.Router();
 
-//GET Requests...this code will handle when a user visits the home page and the thought tank page
 
-module.exports = function(app) {
-    app.get("/", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/thought.html"));
-    });
-    app.get("/thoughttank", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/thoughttank.html"));
-
-    });
-
-    app.get("/archive", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/archive.html"));
-
-    });
-
- }
-
- // These Routes will handle the handle bars object if needed and the post routes to post thought data
+ // These Routes will handle the handle bars object if needed and the post routes to post thoughts to the archive
 
     router.get("/", function (req, res) {
         thought.selectAll(function(data) {
