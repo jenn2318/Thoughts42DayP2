@@ -2,7 +2,7 @@ let userPostArr = [
 
     {
         name: "Tommy",
-        photo: "",
+        photo: "user_tommy.jpg",
         post: [
             "I have a tech start-up meeting today, What is a good opener I can start with to get everyone's attention?",
             "Branding is everything"
@@ -10,7 +10,7 @@ let userPostArr = [
     },
     {
         name: "Jessica",
-        photo: "",
+        photo: "user_jessica.jpg",
         post: [
             "How is everyone doing on Thoughts42Day?",
             "Go to the meetup that is within a 5 mile radius to save time"
@@ -18,7 +18,7 @@ let userPostArr = [
     },
     {
         name: "Nathan",
-        photo: "",
+        photo: "user_nathan.jpg",
         post: [
             "My business name should define what I want to represent creatively...",
             "Conference speaking will help my business idea"
@@ -26,7 +26,7 @@ let userPostArr = [
     },
     {
         name: "Ally",
-        photo: "",
+        photo: "user_ally.jpg",
         post: [
             "I want to creatively write my business plan",
             "Today is a great day to complete my business model"
