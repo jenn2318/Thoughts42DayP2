@@ -14,6 +14,7 @@ $(document).ready(function(){
     $('.modal').modal();
 });
 
+
 //==============================================================
 //Click event that will handle when the user clicks on the Login button
 //Click event will allow the modal to show, will be hidden first
@@ -67,10 +68,39 @@ $("#modal2-show").on("click", function(event) {
 
     // Send an AJAX POST-request with jQuery.....will prepend the user comment to top of live feed
     $.post("/api/thoughttank", newThoughtPost)
+
+document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.modal');
+    let instances = M.Modal.init(elems, options);
+});
+
+// Or with jQuery
+
+$(document).ready(function(){
+    $('.modal').modal();
+});
+
+
+$("#thought-submit").on("click", function(event) {
+    event.preventDefault();
+
+    // Make a newChirp object
+    var newThought = {
+        author: $("#author").val().trim(),
+        body: $("#thought").val().trim(),
+        created_at: moment().format("YYYY-MM-DD HH:mm:ss")
+    };
+
+    console.log(newThought);
+
+    // Send an AJAX POST-request with jQuery
+    $.post("/api/new", newThought)
+
     // On success, run the following code
         .then(function() {
 
             var row = $("<div>");
+
             row.addClass("post");
 
             row.preppend("<p>" + newThoughtPost.thought_name + " posted: </p>");
@@ -79,10 +109,20 @@ $("#modal2-show").on("click", function(event) {
 
             $("#modal2-show").prepend(row);
 
+            row.addClass("thought");
+
+            row.append("<p>" + newThought.author + " thoughts: </p>");
+            row.append("<p>" + newThought.body + "</p>");
+            row.append("<p>At " + moment(newThought.created_at).format("h:mma on dddd") + "</p>");
+
+            $("#thought").prepend(row);
+
+
         });
 
     // Empty each input box by replacing the value with an empty string
     $("#thought").val("");
+
     $("#thought-box").val("");
 });
 
@@ -102,10 +142,34 @@ $.get("/api/thoughttank", function(data) {
 
             $("#modal2-show").prepend(row);
 
+    $("#thought").val("");
+});
+
+// When the page loads, grab all of our chirps
+$.get("/api/all", function(data) {
+
+    if (data.length !== 0) {
+
+        for (var i = 0; i < data.length; i++) {
+
+            var row = $("<div>");
+            row.addClass("thought");
+
+            row.append("<p>" + data[i].author + " chirped.. </p>");
+            row.append("<p>" + data[i].body + "</p>");
+            row.append("<p>At" + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+
+            $("#thought-area").prepend(row);
+
+
         }
 
     }
 
+
 });
 
+
+
+});
 

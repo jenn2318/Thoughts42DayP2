@@ -19,14 +19,22 @@ app.use(express.static('public'));
 
 const exphbs = require("express-handlebars");
 
+//passport
+
+var passport = require('passport')
+    , LocalStrategy = require('passport-local').Strategy;
+
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
 let routes = require("./controllers/thoughts42dayp2_controllers.js");
 
+
 app.use("/", router);
-app.use('/auth', authRoutes);
+// app.use('/auth', authRoutes);
+
+app.use("/", routes);
 
 
 app.listen(PORT, function() {
