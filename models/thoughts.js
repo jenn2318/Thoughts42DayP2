@@ -17,7 +17,7 @@ let User = sequelize.define("user", {
 });
 
 // Syncs with DB
-User.sync();
+Thought.sync();
 
 // Makes the Character Model available for other files (will also create a table)
-module.exports = User;
+module.exports = Thought;

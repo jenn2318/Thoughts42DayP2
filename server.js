@@ -8,6 +8,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const authRoutes = require('/routes/auth-routes')
 
 const PORT = process.env.PORT || 3000;
 // Sets up the Express app to handle data parsing
@@ -25,6 +26,7 @@ app.set("view engine", "handlebars");
 let routes = require("./controllers/thoughts42dayp2_controllers.js");
 
 app.use("/", router);
+app.use('/auth', authRoutes);
 
 
 app.listen(PORT, function() {
