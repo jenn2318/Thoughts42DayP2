@@ -27,25 +27,19 @@
 <nav>
     <div class="nav-wrapper #03a9f4 light-blue">
         <a href="index.html" class="brand-logo">Thoughts42Day</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"></a>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="thought42.html">Home</a></li>
-            <li><a href="thoughttank.html">Thoughts</a></li>
-            <li><a href="#">Enterprise</a></li>
-            <li><a href="archive.html">Archive</a></li>
-        </ul>
-        <!--<ul class="side-nav grey darken-4" id="mobile-part">-->
-        <!--<li><a href="index.html">Home</a></li>-->
-        <!--<li><a href="#">Thoughts</a></li>-->
-        <!--<li><a href="#">Archive</a></li>-->
-        <!--</ul>-->
-
+            <a href="#" data-activates="mobile-demo" class="button-collapse"></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="thought42.html">Home</a></li>
+                    <li><a href="thoughttank.html">Thoughts</a></li>
+                    <li><a href="#">Enterprise</a></li>
+                    <li><a href="archive.html">Archive</a></li>
+                </ul>
         <!--Nav-Bar text-shadowing-->
         <style type="text/css">
             .nav-wrapper {
             text-shadow: 2px 2px #000000;
 }
-</style> 
+       </style>
     </div>
 </nav>
 
@@ -71,6 +65,7 @@
                 <p class="grey-text text lighten-4">Create Group Thoughts With Friends...Learn How!</p>
                 <div class="col 14 offset-12 s12">
                     <h5 class="white-text">Links</h5>
+                    <a class="google-btn" href="/auth/google">Google+</a>
                 </div>
             </div>
         </div>
@@ -84,14 +79,29 @@
                         <div class="row">
                             <span class="white-text"class="center-align">Get Started Logging Your Thoughts!</span>
                             <br><br>
-                            <a class="waves-effect waves-light btn-small"><i class="material-icons left">https</i>LOGIN</a>
+                            <!--<a class="waves-effect waves-light btn-small"><i class="material-icons left">https</i>LOGIN</a>-->
+
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Login</a>
+
+                            <!-- Modal Structure -->
+                            <div id="modal1" class="modal">
+                                <div class="modal-content">
+                                    <h4>Modal Header</h4>
+                                    <p>A bunch of text</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <!--<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>-->
+                                    <button data-target="modal1" class="btn modal-trigger">Login</button>
+                                </div>
+                            </div>
                         </div>
 
                     </form>
                 </div>
             </div>
         </div>
-    </div>
+    </div>n
 
     <br><br>
     <!--Footer text-shadowing-->
@@ -100,7 +110,10 @@
             text-decoration-color: #ffd54f amber lighten-2 !important;
         text-shadow: 2px 2px #000000;
 }
-</style> 
+     </style>
+
+
+
 </footer>
 
 
@@ -111,5 +124,5 @@
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <script type="text/javascript" src="assets/main.js"></script>
-</body>
+   </body>
 </html>

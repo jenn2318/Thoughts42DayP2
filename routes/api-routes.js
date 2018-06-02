@@ -1,62 +1,33 @@
+var db = require("../models");
+
 module.exports = function(app) {
-
-    // GET route for getting all of the posts
-    app.get("/api/thoughts/", function(req, res) {
-        thought.Post.findAll({thought: data})
-            .then(function(thoughtPost) {
-                res.json(thoughtPost);
-            });
+    // Find all users and return them to the user with res.json
+    app.get("/api/user/all", function(req, res) {
+        db.User.findAll({user: data}).then(function(dbUser) {
+            console.log('user', data);
+            res.json(dbuser);
+        });
     });
 
-    // Get route for returning posts of a specific category
-    app.get("/api/thoughts/category/:category", function(req, res) {
-        thought.Post.findAll({
-            where: {
-                category: req.params.category
-            }
-        })
-            .then(function(thoughtPost) {
-                res.json(thoughtPost);
-            });
-    });
-
-    // Get route for retrieving a single post
-    app.get("/api/thoughts/:id", function(req, res) {
-        thought.Post.findOne({
-            where: {
-                id: req.params.id
-            }
-        })
-            .then(function(thoughtPost) {
-                res.json(thoughtPost);
-            });
-    });
-
-    // POST route for saving a new post to the form
-    app.post("/api/thoughts", function(req, res) {
+    app.post("/api/user", function(req, res) {
+        // Create an User with the data available to us in req.body
         console.log(req.body);
-        thought.Post.create({
-            title: req.body.title,
-            body: req.body.body,
-            category: req.body.category
-            date: req.body.date
-        })
-            .then(function(thoughtPost) {
-                res.redirect(thoughtPost);
-            });
+        db.User.create(req.body).then(function(dbUser) {
+            res.json(dbUser);
+        });
     });
 
-
-    // PUT route for updating posts as the user enters a post
-    app.put("/api/thoughts", function(req, res) {
-        thought.Post.update(req.body,
-            {
-                where: {
-                    id: req.body.id
-                }
-            })
-            .then(function(thoughtPost) {
-                res.json(thoughtPost);
-            });
+    app.get("/api/user/:id", function(req, res) {
+        // Find one user with the id in req.params.id and return them to the user with res.json
+        db.User.findOne({
+            where: {
+                email: req.params.email,
+                password: req.params.password,
+            }
+        }).then(function(dbUser) {
+            console.log(dbUser);
+            res.json(dbUser);
+        });
     });
+
 };
