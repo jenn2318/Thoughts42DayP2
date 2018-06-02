@@ -28,29 +28,29 @@ $(document).ready(function() {
 });
 
 
-//If/Else Statement to handle the user authentication if user verified or not
-
-$(document).on("click", login function () {
-    if(!userEmail === userEmail.data) {
-        $(#show).html("Please Try Again!");
-    } else {
-        if(userEmail === userEmail.data) {
-            $(#show).html("Welcome, Access Granted");
-        }
-      }
-});
-
-$(document).on("click", login function () {
-    if(!userPassword === userPassword.data) {
-        $(#show).html("Please Try Again!");
-    } else {
-        if(userPassword === userPassword.data) {
-            $(#show).html("Welcome, Access Granted");
-        }
-    }
-});
-//jQuery to prepend the current user's post
-//jQuery to append the current user's post
+// If/Else Statement to handle the user authentication if user verified or not
+//
+// $(document).on("click", login function () {
+//     if(!userEmail === userEmail.data) {
+//         $(#show).html("Please Try Again!");
+//     } else {
+//         if(userEmail === userEmail.data) {
+//             $(#show).html("Welcome, Access Granted");
+//         }
+//       }
+// });
+//
+// $(document).on("click", login function () {
+//     if(!userPassword === userPassword.data) {
+//         $(#show).html("Please Try Again!");
+//     } else {
+//         if(userPassword === userPassword.data) {
+//             $(#show).html("Welcome, Access Granted");
+//         }
+//     }
+// });
+// jQuery to prepend the current user's post
+// jQuery to append the current user's post
 
 
 // When user clicks on modal
@@ -142,34 +142,33 @@ $.get("/api/thoughttank", function(data) {
 
             $("#modal2-show").prepend(row);
 
-    $("#thought").val("");
-});
-
-// When the page loads, grab all of our chirps
-$.get("/api/all", function(data) {
-
-    if (data.length !== 0) {
-
-        for (var i = 0; i < data.length; i++) {
-
-            var row = $("<div>");
-            row.addClass("thought");
-
-            row.append("<p>" + data[i].author + " chirped.. </p>");
-            row.append("<p>" + data[i].body + "</p>");
-            row.append("<p>At" + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
-
-            $("#thought-area").prepend(row);
-
-
+            $("#thought").val("");
         }
 
+// When the page loads, grab all of our chirps
+        $.get("/api/all", function (data) {
+
+            if (data.length !== 0) {
+
+                for (var i = 0; i < data.length; i++) {
+
+                    var row = $("<div>");
+                    row.addClass("thought");
+
+                    row.append("<p>" + data[i].author + " chirped.. </p>");
+                    row.append("<p>" + data[i].body + "</p>");
+                    row.append("<p>At" + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+
+                    $("#thought-area").prepend(row);
+
+
+                }
+
+            }
+
+
+        });
+
+
     }
-
-
-});
-
-
-
-});
 
