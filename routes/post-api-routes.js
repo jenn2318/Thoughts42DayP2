@@ -9,9 +9,9 @@ module.exports = function(app) {
 
     // GET route for getting all of the posts
     app.get("/api/posts", function(req, res) {
-        var query = {};
-        if (req.query.user_name) {
-            query.UserName = req.query.user_name;
+        let query = {};
+        if (req.query.thought_name) {
+            query.ThoughtName = req.query.thought_name;
         }
         db.Post.findAll({
             where: query
@@ -32,7 +32,7 @@ module.exports = function(app) {
         });
     });
 
-    // POST route for saving a new post
+    // POST route for saving a new post by a user
     app.post("/api/posts", function(req, res) {
         db.Post.create(req.body).then(function(dbPost) {
             res.json(dbPost);
@@ -40,7 +40,7 @@ module.exports = function(app) {
     });
 
 
-    // PUT route for updating posts
+    // PUT route for updating posts by a user
     app.put("/api/posts", function(req, res) {
         db.Post.update(
             req.body,
