@@ -39,25 +39,13 @@ $(document).ready(function() {
 
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     let elems = document.querySelectorAll('.modal');
-//     let instances = M.Modal.init(elems, options);
-// });
-//
-// // Or with jQuery
-//
-// $(document).ready(function(){
-//     $('.modal').modal();
-// });
-
-
 $("#thought-submit").on("click", function(event) {
     console.log("thought-submit clicked");
     event.preventDefault();
 
 
-    // Make a newChirp object
-    var newThought = {
+    // Make a Thought object
+    let newThought = {
         first_name: $("#first_name").val().trim(),
         last_name: $("#last_name").val().trim(),
         body: $("#body").val().trim(),
@@ -101,48 +89,48 @@ $("#thought-submit").on("click", function(event) {
 });
 
 // When the page loads, immediately show the user live social thought post feed
-$.get("/api/thoughttank", function(data) {
-
-    if (userPostArr.length !== 0) {
-
-        for (let i = 0; i < userPostArr.length; i++) {
-
-            let row = $("<div>");
-            row.addClass("post");
-
-            row.append("<p>" + user.post.data[i].thought_name + " chirped.. </p>");
-            row.append("<p>" + user.post.data[i].body + "</p>");
-            row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
-
-            $("#modal2-show").prepend(row);
-
-            $("#thought").val("");
-        }
+// $.get("/api/thoughttank", function(data) {
+//
+//     if (userPostArr.length !== 0) {
+//
+//         for (let i = 0; i < userPostArr.length; i++) {
+//
+//             let row = $("<div>");
+//             row.addClass("post");
+//
+//             row.append("<p>" + user.post.data[i].thought_name + " chirped.. </p>");
+//             row.append("<p>" + user.post.data[i].body + "</p>");
+//             row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+//
+//             $("#modal2-show").prepend(row);
+//
+//             $("#thought").val("");
+//         }
 
 // When the page loads, grab all of the thoughts
-        $.get("/api/all", function (data) {
-
-            if (data.length !== 0) {
-
-                for (var i = 0; i < data.length; i++) {
-
-                    var row = $("<div>");
-                    row.addClass("thought");
-
-                    row.append("<p>" + data[i].author + " chirped.. </p>");
-                    row.append("<p>" + data[i].body + "</p>");
-                    row.append("<p>At" + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
-
-                    $("#thought-area").prepend(row);
-
-
-                }
-
-            }
-
-
-        });
-
-
-    }
-
+//         $.get("/api/all", function (data) {
+//
+//             if (data.length !== 0) {
+//
+//                 for (var i = 0; i < data.length; i++) {
+//
+//                     var row = $("<div>");
+//                     row.addClass("thought");
+//
+//                     row.append("<p>" + data[i].author + " chirped.. </p>");
+//                     row.append("<p>" + data[i].body + "</p>");
+//                     row.append("<p>At" + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+//
+//                     $("#thought-area").prepend(row);
+//
+//
+//                 }
+//
+//             }
+//
+//
+//         });
+//
+//
+//     }
+//

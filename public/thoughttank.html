@@ -28,14 +28,15 @@
             <!--Nav-Bar text-shadowing-->
             <style type="text/css">
                 .nav-wrapper {
-                    text-shadow: 2px 2px #000000;
+                text-shadow: 2px 2px #000000;
                 }
             </style>
         </div>
     </nav>
 
-    <div class="col s4 s4">
+    <div class="col s12 m2">
         <h2 class="header">Welcome Lynn,</h2>
+        <p class="z-depth-3">Here's Your Dashboard!</p>
         <div class="card horizontal">
             <div class="card-image"><img src="assets/images/userLW.jpeg">
             </div>
@@ -45,12 +46,12 @@
                     <p>Public Health Director/Entrepreneur</p>
                 </div>
                 <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a href="#">www.lynnpublicworld.com</a>
                 </div>
             </div>
         </div>
     </div>
-
+</div>
 
     <div class="row">
         <div class="col s6 m6">
@@ -70,7 +71,12 @@
                     <!--</div>-->
                     <div class="row">
                         <form class="col s12">
-                            <div class="row">
+                                Thought Moment:
+                                <div class="input-field inline">
+                                    <input id="date" type="date" class="validate">
+                                    <label for="date" data-error="wrong" data-success="right"></label>
+                                </div>
+
                                 <div class="input-field col s6">
                                     <input placeholder="First Name" id="first_name" type="text" class="validate">
                                     <label for="first_name">First Name</label>
@@ -79,28 +85,36 @@
                                     <input id="last_name" type="text" class="validate">
                                     <label for="last_name">Last Name</label>
                                 </div>
-                                <div class="row">
-                                    <div class="col s12">
-                                        Thought Moment:
-                                        <div class="input-field inline">
-                                            <input id="date" type="date" class="validate">
-                                            <label for="date" data-error="wrong" data-success="right"></label>
-                                        </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    Thought Moment:
+                                    <div class="input-field inline">
+                                        <input id="date" type="date" class="validate">
+                                        <label for="date" data-error="wrong" data-success="right"></label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <form class="col s12">
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <i class="material-icons prefix">mode_edit</i>
-                                            <textarea id="body" class="materialize-textarea"></textarea>
-                                            <label for="body">Text Area</label>
-                                        </div>
-                                    </div>
-                                </form>
+                                <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">mode_edit</i>
+                                    <textarea id="body" class="materialize-textarea"></textarea>
+                                    <label for="body">Text Area</label>
+                                </div>
+                              </div>
                             </div>
-                            <button class="btn waves-effect waves-light" type="submit" id="thought-submit" name="action">Submit
+                            <div class="row">
+                                <!--<form class="col s12">-->
+                                    <!--<div class="row">-->
+                                        <!--<div class="input-field col s12">-->
+                                            <!--<i class="material-icons prefix">mode_edit</i>-->
+                                            <!--<textarea id="textarea1" class="materialize-textarea"></textarea>-->
+                                            <!--<label for="textarea1">Text Area</label>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</form>-->
+                            </div>
+                    <!--<button class="btn waves-effect waves-light" id="thought-submit" type="submit" name="action">Submit-->
+                            <button class="btn waves-effect waves-light" id="thought-submit">Submit
                                 <i class="material-icons right">send</i>
                             </button>
                             <!-- Modal Trigger -->
@@ -115,7 +129,7 @@
                                         <div class="card-panel grey lighten-5 z-depth-1">
                                             <div class="row valign-wrapper">
                                                 <div class="col s2">
-                                                    <img src="images/user_jessica.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                                    <img src="images/user_ally.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                                                 </div>
                                                 <div class="col s10">
               <span class="black-text">
@@ -127,36 +141,69 @@
                                     </div>
 
                                 </div>
-                                <div class="modal-footer">
-                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Comment</a>
-                                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Like</a>
-                                </div>
-                            </div>
+                                <!--<div class="modal-footer">-->
+                                    <!--<a href="#!" class="modal-close waves-effect waves-green btn-flat">Comment</a>-->
+                                    <!--<a href="#!" class="modal-close waves-effect waves-green btn-flat">Like</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
 
                         </form>
                     </div>
                 </div>
-                <div class="card-action">
-                    <a href="#">Creative</a>
-                    <a href="#">Business</a>
-                </div>
+                <!--<div class="card-action">-->
+                    <!--<a href="#">Creative</a>-->
+                    <!--<a href="#">Business</a>-->
+                <!--</div>-->
             </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col s4 md4">
-            <div class="card">
+            <div class="card #80deea cyan lighten-3">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="assets/images/botanical-cactus copy.png">
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4"> Need Thought Suggestions?<i class="material-icons right">more_vert</i></span>
-                    <p><a href="#">This is a link</a></p>
+                    <p><a href="https://www.google.com/search?ei=exMTW6mqLpD-0wLZ7ojIDQ&q=business+and+creative+ideas&oq=business+and+creative+ideas&gs_l=psy-ab.3..0i22i30k1l2.3034.8278.0.8395.27.18.0.0.0.0.535.3108.3-3j1j3.7.0....0...1.1.64.psy-ab..20.7.3107...0j0i67k1.0.erltK-x45pk">Click Here To Brainstorm</a></p>
                 </div>
                 <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    <span class="card-title grey-text text-darken-4">Thought Pool Ideas<i class="material-icons right">close</i></span>
+                    <form action="#">
+                        <p>
+                            <label>
+                                <input type="checkbox" class="checked" checked="checked" />
+                                <span>Project Management Overview</span>
+                                <ul>
+                                <li>Copy Editing Tools</li>
+                                <li>Effective Toastmaster Tips for Events</li>
+                                <li>Meetup Mixer Topics</li>
+                                    </ul>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" class="checked" checked="checked" />
+                                <span>Design Concepts</span>
+                                <ul>
+                                    <li>Color Palette and Typography</li>
+                                    <li>Strategic Web Content</li>
+                                    <li>UI Scability</li>
+                                </ul>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" class="checked" checked="checked" />
+                                <span>Start-Up Culture</span>
+                                <ul>
+                                    <li>Building Tech Business</li>
+                                    <li>Innovation</li>
+                                    <li>Tech Conferences</li>
+                                </ul>
+                            </label>
+                        </p>
                 </div>
             </div>
         </div>
@@ -179,5 +226,5 @@
 <script type="text/javascript" src="./assets/main.js"></script>
 
 
-</body>
+   </body>
 </html>
