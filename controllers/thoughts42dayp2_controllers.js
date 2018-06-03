@@ -6,33 +6,41 @@ const db = require("../models");
 
 
  // These Routes will handle the handle bars object if needed and the post routes to post thoughts to the archive
+const controller = {
+    getUsers: function (req, res) {
+       return(
+           db.User.findAll({}).then(function(dbUser) {
+            console.log('user', dbUser);
+            res.json(dbUser);
+        })
+    )
+    },
+    createUser: function(req, res) {
+        // Create an User with the data available to us in req.body
+        return(
+            db.User.create(req.body).then(function (dbUser) {
+            res.json(dbUser);
+        })
+    )
+    },
+    getUserById: function(req, res) {
+        // Find one user with the id in req.params.id and return them to the user with res.json
+        return(
 
-    router.get("/", function (req, res) {
-        db.User.findAll({}).then(function(data) {
-            // let hbsObject = {thought: data};
-            res.send(data);
-        });
-    });
-
-
-    // // Here we will add a new thought
-    // router.post("/api/thoughttank/", function(req, res) {
-    //    db.User.makeOne(req.body.thought_name, function(){
-    //         res.json('/thoughttank');
-    //     });
-    // });
-    //
-    // //Here will be how to archive a thought
-    // router.post("/api/thoughttank/archive/:id", function(req, res) {
-    //     db.User.updateOne(req.params.id, function(){
-    //         res.json('/archive');
-    //     });
-    // });
-
-
+            db.User.findOne({
+            where: {
+                id: req.params.id,
+            }
+        }).then(function(dbUser) {
+            console.log(dbUser);
+            res.json(dbUser);
+        })
+    )
+    }
+};
 
 
 
 
 //Export the routes
-module.exports = router;
+module.exports = controller;
