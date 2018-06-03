@@ -16,6 +16,17 @@
         .parallax-container {
             height: 495px;
         }
+        .responsive-img {
+            max-width: 35% !important;
+            height: auto !important;
+        }
+        .card-panel {
+            margin: 10px !important;
+        }
+        .page-footer {
+            height: 210px !important;
+            background-color: #03a9f4 !important;
+        }
     </style>
 
 </head>
@@ -67,39 +78,73 @@
                     <a class="google-btn" href="/auth/google">Google+</a>
                     <a class="google-btn" href="/auth/facebook">Facebook</a>
                     <a class="google-btn" href="/auth/twitter">Twitter</a>
+                    <br><br>
+
+
+                    <div class="row">
+                    <img class="responsive-img" src="assets/images/create_notes.jpg">
+                    <div class="row">
+                    <span class="white-text"class="center-align">Get Started Logging Your Thoughts!</span>
+                    <!--<img class="responsive-img" src="assets/images/create_notes.jpg">-->
+                    <br><br>
+                    <!--<a class="waves-effect waves-light btn-small"><i class="material-icons left">https</i>LOGIN</a>-->
+
+                    <!-- Modal Trigger -->
+
+                    <button class="waves-effect waves-light btn modal-trigger" data-target="modal1" >Login</button>
+
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal">
+                    <div class="modal-content">
+                    <h4>Modal Header</h4>
+                    <p>A bunch of text</p>
+                    </div>
+                    <div class="modal-footer">
+                    <!--<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>-->
+                    <button data-target="modal1" class="btn modal-trigger">Login</button>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col 16 s12">
-            <div class="card-panel #03a9f4 light-blue">
-                <div class="row">
-                        <div class="row">
-                            <span class="white-text"class="center-align">Get Started Logging Your Thoughts!</span>
-                            <br><br>
-                            <!--<a class="waves-effect waves-light btn-small"><i class="material-icons left">https</i>LOGIN</a>-->
+    <!--<div class="row">-->
+        <!--<div class="col 16 s12">-->
+            <!--<div class="card-panel #03a9f4 light-blue">-->
+                <!--<div class="row">-->
+                        <!--<div class="row">-->
+                            <!--<img class="responsive-img" src="assets/images/create_notes.jpg">-->
+                            <!--<div class="row">-->
+                            <!--<span class="white-text"class="center-align">Get Started Logging Your Thoughts!</span>-->
+                            <!--&lt;!&ndash;<img class="responsive-img" src="assets/images/create_notes.jpg">&ndash;&gt;-->
+                            <!--<br><br>-->
+                            <!--&lt;!&ndash;<a class="waves-effect waves-light btn-small"><i class="material-icons left">https</i>LOGIN</a>&ndash;&gt;-->
 
-                            <!-- Modal Trigger -->
-                            <button class="waves-effect waves-light btn modal-trigger" data-target="modal1" >Login</button>
+                            <!--&lt;!&ndash; Modal Trigger &ndash;&gt;-->
 
-                            <!-- Modal Structure -->
-                            <div id="modal1" class="modal">
-                                <div class="modal-content">
-                                    <h4>Modal Header</h4>
-                                    <p>A bunch of text</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <!--<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>-->
-                                    <button data-target="modal1" class="btn modal-trigger">Login</button>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                            <!--<button class="waves-effect waves-light btn modal-trigger" data-target="modal1" >Login</button>-->
+
+                            <!--&lt;!&ndash; Modal Structure &ndash;&gt;-->
+                            <!--<div id="modal1" class="modal">-->
+                                <!--<div class="modal-content">-->
+                                    <!--<h4>Modal Header</h4>-->
+                                    <!--<p>A bunch of text</p>-->
+                                <!--</div>-->
+                                <!--<div class="modal-footer">-->
+                                    <!--&lt;!&ndash;<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>&ndash;&gt;-->
+                                    <!--<button data-target="modal1" class="btn modal-trigger">Login</button>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <br><br>
     <!--Footer text-shadowing-->
@@ -109,6 +154,32 @@
         text-shadow: 2px 2px #000000;
 }
      </style>
+
+    <footer class="page-footer #03a9f4 light-blu">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Take Thoughts42Day To Go! </h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Sign Up For Our Newsletter!</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Careers</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Partenrships</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 Elevated Thoughts Group
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
 
 
 

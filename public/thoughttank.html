@@ -28,9 +28,9 @@
             <!--Nav-Bar text-shadowing-->
             <style type="text/css">
                 .nav-wrapper {
-                text-shadow: 2px 2px #000000;
+                    text-shadow: 2px 2px #000000;
                 }
-            </style>             
+            </style>
         </div>
     </nav>
 
@@ -45,7 +45,7 @@
                     <p>Public Health Director/Entrepreneur</p>
                 </div>
                 <div class="card-action">
-                    <a href="#">www.lynnpublicworld.com</a>
+                    <a href="#">This is a link</a>
                 </div>
             </div>
         </div>
@@ -59,15 +59,15 @@
                     <span class="card-title">Contain Your Thoughts!</span>
                     <p>A smart way to keep all your business venture ideas right at your fingertips without negative feedback.</p>
                     <br><br>
-                    <div class="row">
-                        <div class="col s12">
-                            Thought Moment:
-                            <div class="input-field inline">
-                                <input id="date" type="date" class="validate">
-                                <label for="date" data-error="wrong" data-success="right"></label>
-                            </div>
-                        </div>
-                    </div>
+                    <!--<div class="row">-->
+                        <!--<div class="col s12">-->
+                            <!--Thought Moment:-->
+                            <!--<div class="input-field inline">-->
+                                <!--<input id="date" type="date" class="validate">-->
+                                <!--<label for="date" data-error="wrong" data-success="right"></label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
                     <div class="row">
                         <form class="col s12">
                             <div class="row">
@@ -79,19 +79,28 @@
                                     <input id="last_name" type="text" class="validate">
                                     <label for="last_name">Last Name</label>
                                 </div>
+                                <div class="row">
+                                    <div class="col s12">
+                                        Thought Moment:
+                                        <div class="input-field inline">
+                                            <input id="date" type="date" class="validate">
+                                            <label for="date" data-error="wrong" data-success="right"></label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row">
                                 <form class="col s12">
                                     <div class="row">
                                         <div class="input-field col s12">
                                             <i class="material-icons prefix">mode_edit</i>
-                                            <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                            <label for="textarea1">Text Area</label>
+                                            <textarea id="body" class="materialize-textarea"></textarea>
+                                            <label for="body">Text Area</label>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                            <button class="btn waves-effect waves-light" type="submit" id="thought-submit" name="action">Submit
                                 <i class="material-icons right">send</i>
                             </button>
                             <!-- Modal Trigger -->
@@ -106,7 +115,7 @@
                                         <div class="card-panel grey lighten-5 z-depth-1">
                                             <div class="row valign-wrapper">
                                                 <div class="col s2">
-                                                    <img src="images/user_ally.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                                    <img src="images/user_jessica.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                                                 </div>
                                                 <div class="col s10">
               <span class="black-text">
@@ -137,50 +146,17 @@
 
     <div class="row">
         <div class="col s4 md4">
-            <div class="card #80deea cyan lighten-3">
+            <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="assets/images/botanical-cactus copy.png">
                 </div>
                 <div class="card-content">
                     <span class="card-title activator grey-text text-darken-4"> Need Thought Suggestions?<i class="material-icons right">more_vert</i></span>
-                    <p><a href="https://www.google.com/search?ei=exMTW6mqLpD-0wLZ7ojIDQ&q=business+and+creative+ideas&oq=business+and+creative+ideas&gs_l=psy-ab.3..0i22i30k1l2.3034.8278.0.8395.27.18.0.0.0.0.535.3108.3-3j1j3.7.0....0...1.1.64.psy-ab..20.7.3107...0j0i67k1.0.erltK-x45pk">Click Here To Brainstorm</a></p>
+                    <p><a href="#">This is a link</a></p>
                 </div>
                 <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">Thought Pool Ideas<i class="material-icons right">close</i></span>
-                    <form action="#">
-                        <p>
-                            <label>
-                                <input type="checkbox" class="checked" checked="checked" />
-                                <span>Project Management Overview</span>
-                                <ul>
-                                <li>Copy Editing Tools</li>
-                                <li>Effective Toastmaster Tips for Events</li>
-                                <li>Meetup Mixer Topics</li>
-                                    </ul>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input type="checkbox" class="checked" checked="checked" />
-                                <span>Design Concepts</span>
-                                <ul>
-                                    <li>Color Palette and Typography</li>
-                                    <li>Strategic Web Content</li>
-                                    <li>UI Scability</li>
-                                </ul>
-                            </label>
-                        </p>
-                        <p>
-                            <label>
-                                <input type="checkbox" class="checked" checked="checked" />
-                                <span>Start-Up Culture</span>
-                                <ul>
-                                    <li>Building Tech Business</li>
-                                    <li>Innovation</li>
-                                    <li>Tech Conferences</li>
-                                </ul>
-                            </label>
-                        </p>
+                    <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
                 </div>
             </div>
         </div>
@@ -203,5 +179,5 @@
 <script type="text/javascript" src="./assets/main.js"></script>
 
 
-   </body>
+</body>
 </html>
