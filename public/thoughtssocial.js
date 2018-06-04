@@ -1,3 +1,4 @@
+//Materialize Initializer Code For The Modals
 
 $(document).ready(function(){
     $('.modal').modal();
