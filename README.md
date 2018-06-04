@@ -33,18 +33,18 @@ Docker
 ## 1. Concept
 The concept came about after brainstorming on idea of an interactive thought tank, where a user would be able to post their thoughts and not be subjected to negative or harmful feedback, which has been experienced at a rapid rate in mainstream social media sites today. While brainstorming the type of information that users would be able to store, we decided that providing busy entreprenuers, that are always on the go, with a faster way to jot down business venture thoughts or ideas within an environment that offers a safe space for collaboration would be a great way to bring a resolution to this massive problem.
 
-## 2. Intial Planning
+## 2. Initial Planning
 
 A major challenge was making the sequelize database update correctly with the associations that needed to be made between a user table and a thought table.
 Another challenge was getting the information to post correctly inside the modal for making the live feed interactive.
 
-Since a major objective of our project was to familiarize ourselves with new concepts to make this project work in a shiort amount of time, our application does not fully account for the implementation of future features.
+Since a major objective of our project was to familiarize ourselves with new concepts to make this project work in a short amount of time, our application does not fully account for the implementation of future features.
 
 Some Post API routes presented an issue. We also had problems with the manipulating materialize default css styling. However, that was corrected by overwriting the default styling with an !important attribute. Submitting the data to the back end has been challenging, functionality wise. Their are functions that will have to be refactored to make this part work the way first intended.
 
 Sometimes the smallest, most subtle features caused the most unexpected challenges. For example, determining the z-index of elements or adding an image to a div in materialize would cause an error in the console, which would cause issues for the parallax to work. That was not an easy fix at first glance. Moving elements within the page presented a similar challenge, having the overwrite several materialize default styles.
 
-Both issues were fixed by inspecting our home html page elements in the developer tools, and checking to see what other elements could be overwritten and taking out an external css file that was initally written to handle other styling. As materialize works with inline styling. Also, routes were refactored to grab the correct pages once the user sends a request or wants to post data on a specific route.
+Both issues were fixed by inspecting our home html page elements in the developer tools, and checking to see what other elements could be overwritten and taking out an external css file that was initially written to handle other styling. As materialize works with inline styling. Also, routes were refactored to grab the correct pages once the user sends a request or wants to post data on a specific route.
 
 ## 3. Future Additions
 
