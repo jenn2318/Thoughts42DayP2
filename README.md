@@ -2,7 +2,7 @@
 
 Thoughts42Day is an application created to be a safe interactive space for entrepreneurs to collaborate on business venture and creative ideas without being subjected to negative comenets, destructive criticism or cyber-bullying from other users. The creative idea behind Thoughts42Day, is that this app provides an innovative way to be a digital notepad allowing users to create and archive their thoughts and retrieve them at their leisure for meetings or general purposes.
 
-# Intended Use
+# Application Use
 Users can click on the user login to sign into the app or directly bypass and take a look at the live feed of user thought comments, which will allow the option to Like or Comment on other user posts in a collaborative environment. We believe a future version of Thoughts42Day will give the user the option to choose to post 2, 4 or 42, thougths in a day and hightlight the options by color for Creative or Business ideas. An iniital feature target we wanted to meet was to have interactive capability, where users can comment on other user posts, and display live feed thought comment activity by users.
 
 ## Group Members
