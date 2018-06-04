@@ -26,6 +26,7 @@ $(document).ready(function(){
 $(document).ready(function() {
     $("#modal1").on("click", function() {
         $(".modal").show();
+
     });
 
 });

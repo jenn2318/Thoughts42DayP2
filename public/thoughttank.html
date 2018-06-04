@@ -14,8 +14,6 @@
 
 <div>
 
-    <!--<div class="card-panel #03a9f4 light-blue">It's A Lovely Day To Drop A Thought</div>-->
-
     <nav class="#03a9f4 light-blue">
         <div class="nav-wrapper">
             <a href="#!" class="brand-logo"><i class="material-icons">today</i>Thoughts42Day</a>
@@ -37,8 +35,8 @@
     <div class="col s12 m2">
         <h2 class="header">Welcome Lynn,</h2>
         <p class="z-depth-3">Here's Your Dashboard!</p>
-        <div class="card horizontal">
-            <div class="card-image"><img src="assets/images/userLW.jpeg">
+    <div class="card horizontal">
+        <div class="card-image"><img src="assets/images/userLW.jpeg">
             </div>
             <div class="card-stacked">
                 <div class="card-content">
@@ -53,104 +51,75 @@
     </div>
 </div>
 
-    <div class="row">
-        <div class="col s6 m6">
-            <div class="card #80deea cyan lighten-3">
-                <div class="card-content white-text">
-                    <span class="card-title">Contain Your Thoughts!</span>
-                    <p>A smart way to keep all your business venture ideas right at your fingertips without negative feedback.</p>
-                    <br><br>
-                    <!--<div class="row">-->
-                        <!--<div class="col s12">-->
-                            <!--Thought Moment:-->
-                            <!--<div class="input-field inline">-->
-                                <!--<input id="date" type="date" class="validate">-->
-                                <!--<label for="date" data-error="wrong" data-success="right"></label>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <div class="row">
-                        <form class="col s12">
-                             <div class="input-field col s6">
-                                    <input id="first_name" type="text" class="validate">
-                                    <label for="first_name">First Name</label>
+<div class="row">
+ <div class="col s6 m6">
+        <div class="card #80deea cyan lighten-3">
+            <div class="card-content white-text">
+                <span class="card-title">Contain Your Thoughts!</span>
+                <p>A smart way to keep all your business venture ideas right at your fingertips without negative feedback.</p>
+                <br><br>
+                <div class="row">
+                    <form class="col s12">
+                         <div class="input-field col s6">
+                                <input id="first_name" type="text" class="validate">
+                                <label for="first_name">First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" class="validate">
+                                <label for="last_name">Last Name</label>
+                            </div>
+                        <div class="row">
+                            <div class="col s12">
+                                Thought Moment:
+                                <div class="input-field inline">
+                                    <input id="date" type="date" class="validate">
+                                    <label for="date" data-error="wrong" data-success="right"></label>
                                 </div>
-                                <div class="input-field col s6">
-                                    <input id="last_name" type="text" class="validate">
-                                    <label for="last_name">Last Name</label>
-                                </div>
+                            </div>
+                        </div>
                             <div class="row">
-                                <div class="col s12">
-                                    Thought Moment:
-                                    <div class="input-field inline">
-                                        <input id="date" type="date" class="validate">
-                                        <label for="date" data-error="wrong" data-success="right"></label>
-                                    </div>
-                                </div>
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">mode_edit</i>
+                                <textarea id="body" class="materialize-textarea"></textarea>
+                                <label for="body">Text Area</label>
                             </div>
-                                <div class="row">
-                                <div class="input-field col s12">
-                                    <i class="material-icons prefix">mode_edit</i>
-                                    <textarea id="body" class="materialize-textarea"></textarea>
-                                    <label for="body">Text Area</label>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                                <!--<form class="col s12">-->
-                                    <!--<div class="row">-->
-                                        <!--<div class="input-field col s12">-->
-                                            <!--<i class="material-icons prefix">mode_edit</i>-->
-                                            <!--<textarea id="textarea1" class="materialize-textarea"></textarea>-->
-                                            <!--<label for="textarea1">Text Area</label>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</form>-->
-                            </div>
-                    <!--<button class="btn waves-effect waves-light" id="thought-submit" type="submit" name="action">Submit-->
-                            <button class="btn waves-effect waves-light" id="thought-submit">Submit
-                                <i class="material-icons right">send</i>
-                            </button>
-                            <!-- Modal Trigger -->
-                            <button class="waves-effect waves-light btn modal-trigger" data-target="modal2">Thought Timeline</button>
+                          </div>
+                        </div>
+                        <div class="row">
+                        </div>
+                <!--<button class="btn waves-effect waves-light" id="thought-submit" type="submit" name="action">Submit-->
+                        <button class="btn waves-effect waves-light" id="thought-submit">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                        <!-- Modal Trigger -->
+                        <button class="waves-effect waves-light btn modal-trigger" data-target="modal2">Thought Timeline</button>
 
-                            <!-- Modal Structure -->
-                            <div id="modal2" class="modal modal-fixed-footer">
-                                <div class="modal-content">
-                                    <h4>Modal Header</h4>
-                                    <p>Posts Are Waiting For You</p>
-                                    <div class="col s12 m8 offset-m2 l6 offset-l3">
-                                        <div class="card-panel grey lighten-5 z-depth-1">
-                                            <div class="row valign-wrapper">
-                                                <div class="col s2">
-                                                    <img src="images/user_ally.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-                                                </div>
-                                                <div class="col s10">
-              <span class="black-text">
-                User Thought Update:
-              </span>
-                                                </div>
+                        <!-- Modal Structure -->
+                        <div id="modal2" class="modal modal-fixed-footer">
+                            <div class="modal-content">
+                                <h4>Modal Header</h4>
+                                <p>Posts Are Waiting For You</p>
+                            <div class="col s12 m8 offset-m2 l6 offset-l3">
+                                <div class="card-panel grey lighten-5 z-depth-1">
+                                    <div class="row valign-wrapper">
+                                        <div class="col s2">
+                                                <img src="images/user_ally.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                            </div>
+                                            <div class="col s10">
+                                                  <span class="black-text">
+                                                    User Thought Update:
+                                                  </span>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
-                                <!--<div class="modal-footer">-->
-                                    <!--<a href="#!" class="modal-close waves-effect waves-green btn-flat">Comment</a>-->
-                                    <!--<a href="#!" class="modal-close waves-effect waves-green btn-flat">Like</a>-->
-                                <!--</div>-->
-                            <!--</div>-->
-
-                        </form>
-                    </div>
+                            </div>
+                       </form>
                 </div>
-                <!--<div class="card-action">-->
-                    <!--<a href="#">Creative</a>-->
-                    <!--<a href="#">Business</a>-->
-                <!--</div>-->
             </div>
         </div>
     </div>
+</div>
 
     <div class="row">
         <div class="col s4 md4">
@@ -202,13 +171,6 @@
             </div>
         </div>
     </div>
-
-
-    <!--<footer class="footer">-->
-    <!--<div class="container">-->
-    <!--<p><a href="#">Thoughts42Day</a> | <a href="#">Self-Love Programmers</a></p>-->
-    <!--</div>-->
-    <!--</footer>-->
 </div>
 
 
