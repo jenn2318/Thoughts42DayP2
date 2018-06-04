@@ -3,7 +3,7 @@
 Thoughts42Day is an application created to be a safe interactive space for entrepreneurs to collaborate on business venture and creative ideas without being subjected to negative comenets, destructive criticism or cyber-bullying from other users. The creative idea behind Thoughts42Day, is that this app provides an innovative way to be a digital notepad allowing users to create and archive their thoughts and retrieve them at their leisure for meetings or general purposes.
 
 # Application Use
-Users can click on the user login to sign into the app or directly bypass and take a look at the live feed of user thought comments, which will allow the option to Like or Comment on other user posts in a collaborative environment. We believe a future version of Thoughts42Day will give the user the option to choose to post 2, 4 or 42, thougths in a day and hightlight the options by color for Creative or Business ideas. An iniital feature target we wanted to meet was to have interactive capability, where users can comment on other user posts, and display live feed thought comment activity by users.
+Users can click on the user login to sign into the app or directly bypass and take a look at the live feed of user thought comments, which will allow the option to Like or Comment on other user posts in a collaborative environment. We believe a future version of Thoughts42Day will give the user the option to choose to post 2, 4 or 42, thoughts in a day and highlight the options by color for Creative or Business ideas. An initial feature target we wanted to meet was to have interactive capability, where users can comment on other user posts, and display live feed thought comment activity by users.
 
 ## Group Members
 Jennifer Ponder
@@ -18,13 +18,15 @@ HTML5/CSS
 Materialize
 Sequelize
 Handlebars
+Docker
 
-# Develpopment Process
+
+# Development Process
 1. Concept
 
 2. Initial Planning
 
-3.Challenges and Successes
+3. Challenges and Successes
 
 4. Future Additions
 
@@ -54,4 +56,4 @@ Create interactive archive feature for other users to comment on archived though
 Add handlebars or EJS templating to build out the html pages
 Add more users to the database
 Make API calls to business related or creative related websites for thought ideas and emojis
-Add Passportjs functionality for user authentication for user sign in with Google 
+Add Passport.js functionality for user authentication for user sign in with Google 
