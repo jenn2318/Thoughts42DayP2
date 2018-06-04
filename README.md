@@ -29,7 +29,7 @@ Handlebars
 4. Future Additions
 
 ## 1. Concept
-Our idea with the idea of an interactive thought tank, where a user would be able to post their thoughts and not be subjected to negative feedback, which has been experienced in mainstream social media sites of today. While brainstorming the type of information that users would be able to store, we decided that providing busy entreprenuers, that are always on the go, with a faster way to jot down business venture thoughts or ideas within an environment that offers safe space for collaboration.
+The concept came about after brainstorming on idea of an interactive thought tank, where a user would be able to post their thoughts and not be subjected to negative or harmful feedback, which has been experienced at a rapid rate in mainstream social media sites today. While brainstorming the type of information that users would be able to store, we decided that providing busy entreprenuers, that are always on the go, with a faster way to jot down business venture thoughts or ideas within an environment that offers a safe space for collaboration would be a great way to bring a resolution to this massive problem.
 
 ## 2. Intial Planning
 
@@ -42,7 +42,7 @@ Some Post API routes presented an issue. We also had problems with the manipulat
 
 Sometimes the smallest, most subtle features caused the most unexpected challenges. For example, determining the z-index of elements or adding an image to a div in materialize would cause an error in the console, which would cause issues for the parallax to work. That was not an easy fix at first glance. Moving elements within the page presented a similar challenge, having the overwrite several materialize default styles.
 
-Both issues were fixed by inspecting our home html page elements in the developer tools, and checking to see what other elements could be overwritten and taking out an external css file that was initally written to handle other styling. As materialize works with inline styling.
+Both issues were fixed by inspecting our home html page elements in the developer tools, and checking to see what other elements could be overwritten and taking out an external css file that was initally written to handle other styling. As materialize works with inline styling. Also, routes were refactored to grab the correct pages once the user sends a request or wants to post data on a specific route.
 
 ## 3. Future Additions
 
@@ -53,5 +53,5 @@ Allow users to interact with the like and comments features
 Create interactive archive feature for other users to comment on archived thought posts
 Add handlebars or EJS templating to build out the html pages
 Add more users to the database
-Make API calls to business related or creative related websites for thought ideas
+Make API calls to business related or creative related websites for thought ideas and emojis
 Add Passportjs functionality for user authentication for user sign in with Google 
