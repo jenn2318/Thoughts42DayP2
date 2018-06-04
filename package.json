@@ -1,35 +1,38 @@
 {
   "name": "thoughts42dayp2",
   "version": "1.0.0",
-  "description": "Project 2",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+  "description": "Thoughts42Day is an application created to be a safe interactive space for entrepreneurs to collaborate on business venture and creative ideas without being subjected to negative comenets, destructive criticism or cyber-bullying from other users. The creative idea behind Thoughts42Day, is that this app provides an innovative way to be a digital notepad allowing users to create and archive their thoughts and retrieve them at their leisure for meetings or general purposes.",
+  "main": "passport.js",
+  "directories": {
+    "test": "test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jenn2318/Thoughts42DayP2.git"
-  },
-  "author": "Jennifer Ponder",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jenn2318/Thoughts42DayP2/issues"
-  },
-  "homepage": "https://github.com/jenn2318/Thoughts42DayP2#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "chai": "^4.1.2",
     "docker": "^1.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
-    "mocha": "^5.2.0",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
     "passport": "^0.4.0",
-    "passport-auth0": "^0.6.1",
     "passport-local": "^1.0.0",
-    "sequelize": "^4.37.10",
-    "sequelize-cli": "^4.0.0"
-  }
+    "sequelize": "^4.37.10"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenn2318/Thoughts42DayP2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenn2318/Thoughts42DayP2/issues"
+  },
+  "homepage": "https://github.com/jenn2318/Thoughts42DayP2#readme"
 }

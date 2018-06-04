@@ -29,6 +29,9 @@ $(document).ready(function() {
 //Click event that will handle when the user clicks on the Login button
 //Click event will handle thought submit data to be posted to the backend
 
+$(document).ready(function() {
+
+
 
 $("#thought-submit").on("click", function(event) {
     console.log("thought-submit clicked");
@@ -78,7 +81,7 @@ $("#thought-submit").on("click", function(event) {
 
     // $("#thought-box").val("");
 });
-
+});
 // When the page loads, immediately show the user live social thought post feed
 // $.get("/api/thoughttank", function(data) {
 //
