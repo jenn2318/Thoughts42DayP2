@@ -1,6 +1,4 @@
-
-
-
+//Materialize Initialization Code for the Modal here
 
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
@@ -20,15 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Or with jQuery
 
+
 $(document).ready(function(){
     $('.modal').modal();
 });
-
-
-//==============================================================
-//Click event that will handle when the user clicks on the Login button
-//Click event will allow the modal to show, will be hidden first
-
 
 $(document).ready(function() {
     $("#modal1").on("click", function() {
@@ -37,6 +30,10 @@ $(document).ready(function() {
 
 });
 
+
+//==============================================================
+//Click event that will handle when the user clicks on the Login button
+//Click event will handle thought submit data to be posted to the backend
 
 
 $("#thought-submit").on("click", function(event) {
