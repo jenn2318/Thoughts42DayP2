@@ -2,6 +2,11 @@
 //     $('.parallax').parallax();
 // });
 
+//
+//
+
+
+
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     var elems = document.querySelectorAll('.parallax');
@@ -22,6 +27,17 @@
 // $(".btn").on("click", function(event) {
 //   event.preventDefault();
 
+
+  // Make a newThought object
+  // var newThought = {
+  //   first_name: $("#first_name").val().trim(),
+  //   last_name: $("#last_name").val().trim(),
+  //   body: $("#textarea1").val().trim(),
+  //   created_at: moment().format("YYYY-MM-DD HH:mm:ss")
+  // };
+
+  // console.log(newThought);
+
 //   // Make a newThought object
 //   var newThought = {
 //     first_name: $("#first_name").val().trim(),
@@ -34,12 +50,24 @@
 
 
 
+
 ///CHIRP???
 ///  Need to split Author and create a #first_name and #last_name
   // Send an AJAX POST-request with jQuery
   // $.post("/api/new", newThought)
   //   // On success, run the following code
   //   .done(function() {
+
+  //
+  //     var row = $("<div>");
+  //     row.addClass("chirp");
+  //
+  //     row.append("<p>" + newThought.first_name +  newThought.last_name + " chirped: </p>");
+  //     row.append("<p>" + newThought.body + "</p>");
+  //     row.append("<p>At " + moment(newThought.created_at).format("h:mma on dddd") + "</p>");
+  //
+  //     $("#textarea1").prepend(row);
+  //
 
   //     var row = $("<div>");
   //     row.addClass("chirp");
@@ -49,6 +77,7 @@
   //     row.append("<p>At " + moment(newThought.created_at).format("h:mma on dddd") + "</p>");
 
   //     $("#textarea1").prepend(row);
+
 
   //   });
 
@@ -64,6 +93,25 @@
 ///  Need to split Author and create a #first_name and #last_name
 // When the page loads, grab all of our chirps
 // $.get("/api/all", function(data) {
+
+//
+//   if (data.length !== 0) {
+//
+//     for (var i = 0; i < data.length; i++) {
+//
+//       var row = $("<div>");
+//       row.addClass("chirp");
+//
+//       row.append("<p>" + data[i].first_name + data[i].last_name + " chirped.. </p>");
+//       row.append("<p>" + data[i].body + "</p>");
+//       row.append("<p>At " + moment(data[i].created_at).format("h:mma on dddd") + "</p>");
+//
+//       $("#textarea1").prepend(row);
+//
+//     }
+//
+//   }
+
 
 //   if (data.length !== 0) {
 

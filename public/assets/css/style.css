@@ -1,3 +1,12 @@
 .parallax-container {
     height: 300px;
 }
+
+
+.image.responsive-img {
+    max-width: 40% !important;
+}
+
+.card-panel {
+    max-width: 50% !important;
+}
