@@ -1,54 +1,55 @@
 
-var path = require("path");
-
-//GET Requests...this code will handle when a user visits the home page and the thought tank page
-
-module.exports = function(app) {
-    app.get("/", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/thought.html"));
-    });
-    app.get("/thoughttank", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/thoughttank.html"));
-
-    });
-
- }
-
- // These Routes will handle the handle bars object if needed and the post routes to post thought data
-
-    router.get("/", function (req, res) {
-        thought.selectAll(function(data) {
-            let hbsObject = {thought: data};
-            res.render('thoughttank', hbsObject);
-        });
-    });
-
-
-    // Here we will add a new thought
-    router.post("/api/thoughttank/", function(req, res) {
-        thought.insertOne(req.body.thought_name, function(){
-            res.redirect('/');
-        });
-    });
-
-    router.post("/api/thoughttank/", function(req, res) {
-        thought.insertOne(req.body.thought_date, function(){
-            res.redirect('/');
-        });
-    });
-
-
-    //Here will be how to archive a thought
-    router.post("/api/thoughttank/archive/:id", function(req, res) {
-        thought.updateOne(req.params.id, function(){
-            res.sned('/archive');
-        });
-    });
+const path = require("path");
+const express = require('express');
+const router = express.Router();
+const db = require("../models");
 
 
 
+const controller = {
+    getUsers: function (req, res) {
+       return(
+           db.User.findAll({}).then(function(dbUser) {
+            console.log('user', dbUser);
+            res.json(dbUser);
+        })
+    )
+    },
+    createUser: function(req, res) {
+        // Create an User with the data available to us in req.body
+        return(
+            db.User.create(req.body).then(function (dbUser) {
+            res.json(dbUser);
+        })
+    )
+    },
+    createThought: function(req, res) {
+        // Create an User with the data available to us in req.body
+        console.log("createThought");
+        return(
+            db.Thought.create(req.body).then(function (dbThought) {
+                res.json(dbThought);
+            })
+        )
+    },
+    getUserById: function(req, res) {
+        // Find one user with the id in req.params.id and return them to the user with res.json
+        return(
+
+            db.User.findOne({
+            where: {
+                id: req.params.id,
+            }
+        }).then(function(dbUser) {
+            console.log(dbUser);
+            res.json(dbUser);
+        })
+    )
+    }
+};
 
 
 
-Export the routes
-module.exports = router;
+
+//Export the routes
+module.exports = controller;

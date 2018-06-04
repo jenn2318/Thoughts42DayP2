@@ -5,47 +5,55 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
 
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <!--text-shadow-->    
+    <!--text-shadow-->
     <style>
         .parallax-container {
             height: 495px;
         }
+        .responsive-img {
+            max-width: 35% !important;
+            height: auto !important;
+        }
+        .card-panel {
+            margin: 10px !important;
+        }
+        .page-footer {
+            height: 210px !important;
+            background-color: #03a9f4 !important;
+        }
+        #grey-text {
+            text-align: center !important;
+        }
+        #grey-text-small {
+            text-align: center !important;
+        }
     </style>
-
 </head>
+
 
 <body class="#ffd54f amber lighten-2">
 
-
-
 <nav>
     <div class="nav-wrapper #03a9f4 light-blue">
-        <a href="index.html" class="brand-logo">Thoughts42Day</a>
+
+        <a href="index.html" class="brand-logo"><i class="material-icons">today</i>Thoughts42Day</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"></a>
         <ul class="right hide-on-med-and-down">
             <li><a href="thought42.html">Home</a></li>
             <li><a href="thoughttank.html">Thoughts</a></li>
-            <li><a href="#">Enterprise</a></li>
             <li><a href="archive.html">Archive</a></li>
         </ul>
-        <!--<ul class="side-nav grey darken-4" id="mobile-part">-->
-        <!--<li><a href="index.html">Home</a></li>-->
-        <!--<li><a href="#">Thoughts</a></li>-->
-        <!--<li><a href="#">Archive</a></li>-->
-        <!--</ul>-->
-
         <!--Nav-Bar text-shadowing-->
         <style type="text/css">
             .nav-wrapper {
-            text-shadow: 2px 2px #000000;
-}
-</style> 
+                text-shadow: 2px 2px #000000;
+            }
+        </style>
     </div>
 </nav>
 
@@ -64,43 +72,86 @@
 </div>
 
 <footer class="page-footer #80deea cyan lighten-3">
-    <div class="container">
-        <div class="row">
-            <div class="col 16 s12">
-                <h5 class="white text">Join the discussion!</h5>
-                <p class="grey-text text lighten-4">Create Group Thoughts With Friends...Learn How!</p>
-                <div class="col 14 offset-12 s12">
-                    <h5 class="white-text">Links</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col s4 m3">
-            <div class="card-panel #03a9f4 light-blue">
+  <div class="container">
+       <div class="row">
+        <div class="col 16 s12">
+            <h5 id="grey-text" class=" grey-text black text">Login With Your Social Accounts To Collaborate!</h5>
+            <p id="grey-text-small" class="grey-text">Create Group Thoughts With Friends</p>
+            <!--<div class="col 14 offset-12 s12">-->
+            <div class="col 14 s12">
+                <h5 class="white-text">Links</h5>
+                <a class="google-btn" href="/auth/google">Google+</a>
+                <a class="facebook-btn" href="/auth/facebook">Facebook</a>
+                <a class="twitter-btn" href="/auth/twitter">Twitter</a>
+                <br><br>
+            <div class="row">
+                    <!--<div class=" col 16 s12"-->
+                    <!--<img class="responsive-img" src="assets/images/create_notes.jpg">-->
+                    <img class="responsive-img" src="assets/images/notebook_flipped.jpg">
+                    <img class="responsive-img" src="assets/images/notebook_phone.jpg">
+                    <!--<img class="responsive-img" src="assets/images/computer_thought.jpg">-->
                 <div class="row">
-                    <form class="col s12">
-                        <div class="row">
-                            <span class="white-text"class="center-align">Get Started Logging Your Thoughts!</span>
-                            <br><br>
-                            <a class="waves-effect waves-light btn-small"><i class="material-icons left">https</i>LOGIN</a>
-                        </div>
+                    <span class="white-text"class="center-align">Get Started Logging Your Thoughts!</span>
+                    <!--<img class="responsive-img" src="assets/images/create_notes.jpg">-->
+                    <br><br>
+                    <!--<a class="waves-effect waves-light btn-small"><i class="material-icons left">https</i>LOGIN</a>-->
 
-                    </form>
+                    <!-- Modal Trigger -->
+
+                    <button class="waves-effect waves-light btn modal-trigger" data-target="modal1" >Login</button>
+
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <h4>Modal Header</h4>
+                            <p>Please Login Here</p>
+                        </div>
+                        <div class="modal-footer">
+                            <!--<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>-->
+                                    <button data-target="modal1" class="btn modal-trigger">Login</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     <br><br>
     <!--Footer text-shadowing-->
     <style type="text/css">
         .white-text, h5 {
             text-decoration-color: #ffd54f amber lighten-2 !important;
-        text-shadow: 2px 2px #000000;
-}
-</style> 
+            text-shadow: 2px 2px #000000;
+    </style>
+
+    <footer class="page-footer #03a9f4 light-blu">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Take Thoughts42Day To Go! </h5>
+                    <p class="grey-text text-lighten-4">Always stay connected to your ideas. We keep your your progess for you even on mobile devices.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Sign Up For Our Newsletter!</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Careers</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Partenrships</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2018 Elevated Thoughts Group
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
 </footer>
 
 
@@ -110,6 +161,6 @@
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-<script type="text/javascript" src="assets/main.js"></script>
+<script type="text/javascript" src="./assets/main.js"></script>
 </body>
 </html>
