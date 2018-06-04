@@ -5,7 +5,7 @@ const router = express.Router();
 const db = require("../models");
 
 
- // These Routes will handle the handle bars object if needed and the post routes to post thoughts to the archive
+
 const controller = {
     getUsers: function (req, res) {
        return(
@@ -22,6 +22,15 @@ const controller = {
             res.json(dbUser);
         })
     )
+    },
+    createThought: function(req, res) {
+        // Create an User with the data available to us in req.body
+        console.log("createThought");
+        return(
+            db.Thought.create(req.body).then(function (dbThought) {
+                res.json(dbThought);
+            })
+        )
     },
     getUserById: function(req, res) {
         // Find one user with the id in req.params.id and return them to the user with res.json

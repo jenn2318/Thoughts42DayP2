@@ -1,3 +1,4 @@
+//Materialize code for the Parallax
 $(document).ready(function(){
     $('.parallax').parallax();
 });
