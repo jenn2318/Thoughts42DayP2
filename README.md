@@ -20,8 +20,11 @@ Handlebars
 
 # Develpopment Process
 1. Concept
+
 2. Initial Planning
+
 3.Challenges and Successes
+
 4. Future Additions
 
 ## 1. Concept
@@ -40,7 +43,7 @@ Sometimes the smallest, most subtle features caused the most unexpected challeng
 
 Both issues were fixed by inspecting our home html page elements in the developer tools, and checking to see what other elements could be overwritten and taking out an external css file that was initally written to handle other styling. As materialize works with inline styling.
 
-5. Future Additions
+## 3. Future Additions
 
 If we had more time, we would...
 
