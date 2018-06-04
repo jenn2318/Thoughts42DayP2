@@ -60,7 +60,7 @@
                 <p>A smart way to keep all your business venture ideas right at your fingertips without negative feedback.</p>
                 <br><br>
                 <div class="row">
-                    <form class="col s12">
+                    <form class="col s12" id="myForm">
                         <div class="input-field col s6">
                             <input id="first_name" type="text" class="validate">
                             <label for="first_name">First Name</label>
@@ -93,6 +93,7 @@
                 <button class="btn waves-effect waves-light" id="thought-submit">Submit
                     <i class="material-icons right">send</i>
                 </button>
+                <!--<input type="reset" onclick="myFunction()">-->
                 <!-- Modal Trigger -->
                 <button class="waves-effect waves-light btn modal-trigger" data-target="modal2">Thought Timeline</button>
 
@@ -105,7 +106,7 @@
                             <div class="card-panel grey lighten-5 z-depth-1">
                                 <div class="row valign-wrapper">
                                     <div class="col s2">
-                                        <img src="/images/user_jessicat1.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                                        <img src="#" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
                                     </div>
                                     <div class="col s10">
                                       <span class="black-text">
@@ -184,6 +185,12 @@
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <script type="text/javascript" src="./assets/main.js"></script>
+
+<script>
+    function myFunction() {
+        document.getElementById("myForm").reset();
+    }
+</script>
 
 
 </body>

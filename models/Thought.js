@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Thought = sequelize.define("Thought", {
+    let Thought = sequelize.define("Thought", {
         first_name: DataTypes.STRING,
         last_name: DataTypes.STRING,
         date: DataTypes.DATE,
