@@ -119,6 +119,7 @@ $(document).ready(function() {
         $("#thought-box").val("");
     });
 });
+
 // When the page loads, immediately show the user live social thought post feed
 // $.get("/api/thoughttank", function(data) {
 //
