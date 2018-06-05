@@ -44,6 +44,16 @@ $(document).ready(function() {
 
 });
 
+
+$(document).ready(function() {
+	// $("")
+})
+
+
+
+
+
+
 $(document).ready(function() {
     $("#modal02").on("click", function() {
         console.log("modal-show");
