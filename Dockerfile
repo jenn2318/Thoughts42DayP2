@@ -13,7 +13,7 @@ RUN npm install
 COPY . .
 
 # Open the port where your server is running
-EXPOSE 8080
+EXPOSE 3000
 
 # Start your server
 CMD [ "npm", "start" ]

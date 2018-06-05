@@ -1,5 +1,6 @@
 
 window.addEventListener('load', function() {
+    console.log("listened")
 
     var webAuth = new auth0.WebAuth({
         domain: 'shelden.auth0.com',
