@@ -45,10 +45,6 @@ $(document).ready(function() {
 });
 
 
-$(document).ready(function() {
-	// $("")
-})
-
 
 
 
@@ -74,6 +70,7 @@ $(document).ready(function() {
                         		$("<p>").text(thoughts[i].date),
                         		$("<p>").text(thoughts[i].body)                        			
                         	)
+
 
                     )
 
@@ -115,29 +112,30 @@ $(document).ready(function() {
         // On success, run the following code
             .then(function(response) {
                 console.log(response);
-                let row = $("<div>");
-
-                row.addClass("post");
-                 row.prepend("<p>" + newThoughtPost.thought_name + " posted: </p>");
-                 row.prepend("<p>" + newThoughtPost.body + "</p>");
-                row.prepend("<p>" + newThoughtPost.date + "</p>");
-                 // row.prepend("<p>At " + moment(thought_date.created_at).format("h:mma on dddd") + "</p>");
-
-                 $("#modal2-show").prepend(row);
-
-                 row.addClass("thought");
-
-                 row.append("<p>" + newThoughtPost.thought_name + " thoughts: </p>");
-                 row.append("<p>" + newThoughtPost.body + "</p>");
-                 row.append("<p>" + newThoughtPost.date + "</p>");
-                 // row.append("<p>At " + moment(newThoughtPost.created_at).format("h:mma on dddd") + "</p>");
-
-                $("#thought").prepend(row);
+                alert("Post Submitted Successfully!");
+                // let row = $("<div>");
+                //
+                // row.addClass("post");
+                // row.prepend("<p>" + newThoughtPost.thought_name + " posted: </p>");
+                // row.prepend("<p>" + newThoughtPost.body + "</p>");
+                // row.prepend("<p>" + newThoughtPost.date + "</p>");
+                // // row.prepend("<p>At " + moment(thought_date.created_at).format("h:mma on dddd") + "</p>");
+                //
+                // $("#modal2-show").prepend(row);
+                //
+                // row.addClass("thought");
+                //
+                // row.append("<p>" + newThoughtPost.thought_name + " thoughts: </p>");
+                // row.append("<p>" + newThoughtPost.body + "</p>");
+                // row.append("<p>" + newThoughtPost.date + "</p>");
+                // // row.append("<p>At " + moment(newThoughtPost.created_at).format("h:mma on dddd") + "</p>");
+                //
+                // $("#thought").prepend(row);
 
 
             });
 
-         //Empty each input box by replacing the value with an empty string
+        //Empty each input box by replacing the value with an empty string
 
         document.getElementById("myForm").reset();
 
