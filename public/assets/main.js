@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 $(document).ready(function(){
     $('.parallax').parallax();
-    $('.modal').modal();
+    // $('.modal').modal();
 });
 
 //==========================================================
@@ -23,6 +23,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.modal').modal();
 });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     let elems = document.querySelectorAll('.modal');
@@ -164,4 +165,8 @@ $(document).ready(function() {
 //
 //
 //     }
+<<<<<<< HEAD
 //
+=======
+//
+>>>>>>> 51337b7a13ec2647c996707210c7a8c33fa5d3d4

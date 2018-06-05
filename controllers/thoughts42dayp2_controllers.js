@@ -5,7 +5,6 @@ const router = express.Router();
 const db = require("../models");
 
 
-
 const controller = {
     getUsers: function (req, res) {
        return(
@@ -28,6 +27,14 @@ const controller = {
         console.log("createThought");
         return(
             db.Thought.create(req.body).then(function (dbThought) {
+                res.json(dbThought);
+            })
+        )
+    },
+    getThought: function (req, res) {
+        return (
+            db.Thought.findAll({}).then(function (dbThought) {
+                console.log('thought', dbThought);
                 res.json(dbThought);
             })
         )

@@ -1,5 +1,9 @@
+// const Sequelize = require("sequelize");
+// const connection = new Sequelize("thoughts_db", "root", "root")
+
+
 module.exports = function(sequelize, DataTypes) {
-    var Thought = sequelize.define("Thought", {
+    let Thought = sequelize.define("Thought", {
         first_name: DataTypes.STRING,
         last_name: DataTypes.STRING,
         date: DataTypes.DATE,
@@ -8,3 +12,6 @@ module.exports = function(sequelize, DataTypes) {
     });
     return Thought;
 };
+
+//Syncs with db
+// Thought.sync();
