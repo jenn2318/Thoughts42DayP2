@@ -61,6 +61,8 @@ $(document).ready(function() {
         $(".modal").show();
         $.get("/api/thought").then(function (thoughts) {
             console.log("entering loop")
+            // empy the modal (adding div)
+            $("#modalcontent").empty();
             for (let i=0; i<thoughts.length; i++) {
                 console.log(thoughts[i])
                 $("#modelcontent").append(
