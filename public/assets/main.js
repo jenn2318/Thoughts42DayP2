@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
 // Or with jQuery
 
 
-$(document).ready(function(){
-    $('.modal').modal();
-});
+// $(document).ready(function(){
+//     $('.modal').modal();
+// });
 
 $(document).ready(function() {
     $("#modal1").on("click", function() {
