@@ -37,23 +37,27 @@ document.addEventListener('DOMContentLoaded', function() {
 // });
 
 $(document).ready(function() {
-    $("#modal1").on("click", function() {
-        console.log("modal-show");
-        $(".modal").show();
-        // $.get("/api/thought").then(function (thoughts) {
-            // $("<div>").addClass("card").append(
-            //     $("<div>").addClass("card-image").append(
-            //
-            //     )
-            // )
-            // console.log(thoughts);
+    // $("#modal1").on("click", function() {
+    //     console.log("modal-show");
+    //     $(".modal").show();
+    // });
+// click listeners for login page
+// insert code
+    // $("#btn-login").on("click", function() {
+    // 	console.log("button log clicked")
+// });
 
 
-        // })
 
-    });
+
 
 });
+
+
+
+
+
+
 
 $(document).ready(function() {
     $("#modal02").on("click", function() {
@@ -61,28 +65,28 @@ $(document).ready(function() {
         $(".modal").show();
         $.get("/api/thought").then(function (thoughts) {
             console.log("entering loop")
+            // empy the modal (adding div)
+            $("#modalcontent").empty();
             for (let i=0; i<thoughts.length; i++) {
                 console.log(thoughts[i])
                 $("#modelcontent").append(
-                    $("<div>").addClass("card").append(
-                        $("<h1>").text(thoughts[i].body)
+                    $("<div>").addClass("card blue-grey darken-1").append(
+                        $("<div>").addClass("card-content #ffd54f amber lighten-2").append(
+                            $("<span>").addClass("card-title text-center").html(thoughts[i].first_name + " " + thoughts[i].last_name),
+                            // ).text(thoughts[i].body).append(
+                            $("<div>").addClass("card-image").append(
+                                $("<img>").css({"height": "50%", "width": "50%"}).attr("src", "/assets/images/userLW.jpeg")),
+                            $("<p>").text(thoughts[i].date),
+                            $("<p>").text(thoughts[i].body)
+                        )
+
 
                     )
 
                 );
             }
-            // $("<div>").addClass("card").append(
-            //     $("<div>").addClass("card-image").append(
-            //
-            //     )
-            // )
-            console.log(thoughts);
-
-
         })
-
     });
-
 });
 
 //==============================================================
@@ -117,29 +121,30 @@ $(document).ready(function() {
         // On success, run the following code
             .then(function(response) {
                 console.log(response);
-                let row = $("<div>");
-
-                row.addClass("post");
-                 row.prepend("<p>" + newThoughtPost.thought_name + " posted: </p>");
-                 row.prepend("<p>" + newThoughtPost.body + "</p>");
-                row.prepend("<p>" + newThoughtPost.date + "</p>");
-                 // row.prepend("<p>At " + moment(thought_date.created_at).format("h:mma on dddd") + "</p>");
-
-                 $("#modal2-show").prepend(row);
-
-                 row.addClass("thought");
-
-                 row.append("<p>" + newThoughtPost.thought_name + " thoughts: </p>");
-                 row.append("<p>" + newThoughtPost.body + "</p>");
-                 row.append("<p>" + newThoughtPost.date + "</p>");
-                 // row.append("<p>At " + moment(newThoughtPost.created_at).format("h:mma on dddd") + "</p>");
-
-                $("#thought").prepend(row);
+                alert("Post Submitted Successfully!");
+                // let row = $("<div>");
+                //
+                // row.addClass("post");
+                // row.prepend("<p>" + newThoughtPost.thought_name + " posted: </p>");
+                // row.prepend("<p>" + newThoughtPost.body + "</p>");
+                // row.prepend("<p>" + newThoughtPost.date + "</p>");
+                // // row.prepend("<p>At " + moment(thought_date.created_at).format("h:mma on dddd") + "</p>");
+                //
+                // $("#modal2-show").prepend(row);
+                //
+                // row.addClass("thought");
+                //
+                // row.append("<p>" + newThoughtPost.thought_name + " thoughts: </p>");
+                // row.append("<p>" + newThoughtPost.body + "</p>");
+                // row.append("<p>" + newThoughtPost.date + "</p>");
+                // // row.append("<p>At " + moment(newThoughtPost.created_at).format("h:mma on dddd") + "</p>");
+                //
+                // $("#thought").prepend(row);
 
 
             });
 
-         //Empty each input box by replacing the value with an empty string
+        //Empty each input box by replacing the value with an empty string
 
         document.getElementById("myForm").reset();
 
@@ -148,6 +153,7 @@ $(document).ready(function() {
         $("#thought-box").val("");
     });
 });
+
 // When the page loads, immediately show the user live social thought post feed
 // $.get("/api/thoughttank", function(data) {
 //

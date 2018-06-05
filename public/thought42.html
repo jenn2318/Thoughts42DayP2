@@ -32,6 +32,14 @@
         #grey-text-small {
             text-align: center !important;
         }
+
+        .container-fluid {
+            background-color: #03a9f4 !important;
+        }
+
+        .navbar-brand {
+          color: #ffd54f; !important;
+        }
     </style>
 </head>
 
@@ -87,10 +95,10 @@
                 <br><br>
             <div class="row">
                     <!--<div class=" col 16 s12"-->
-                    <!--<img class="responsive-img" src="assets/images/create_notes.jpg">-->
                     <img class="responsive-img" src="assets/images/notebook_flipped.jpg">
                     <img class="responsive-img" src="assets/images/notebook_phone.jpg">
-                    <!--<img class="responsive-img" src="assets/images/computer_thought.jpg">-->
+            </div>
+
                 <div class="row">
                     <span class="white-text"class="center-align">Get Started Logging Your Thoughts!</span>
                     <!--<img class="responsive-img" src="assets/images/create_notes.jpg">-->
@@ -99,19 +107,55 @@
 
                     <!-- Modal Trigger -->
 
+
                     <button class="waves-effect waves-light btn modal-trigger" data-target="modal1" >Login</button>
                     <div class="content">
+
 
 
                         <!-- Modal Structure -->
                     <div id="modal1" class="modal">
                         <div class="modal-content">
+
+                            <h6>Modal Header</h6>
+                            <div class="content">
+                                <nav class="navbar navbar-default">
+                                    <div class="container-fluid">
+                                        <div class="navbar-header">
+                                            <a class="navbar-brand" href="#">Have An Account? Login Here: </a>
+
+                                            <button id="btn-login" class="btn btn-primary btn-margin">
+                                                Log In
+                                            </button>
+
+                                            <button id="btn-logout" class="btn btn-primary btn-margin">
+                                                Log Out
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                </nav>
+
+                                <main class="container">
+                                    <!-- home view -->
+                                    <div id="home-view">
+                                        <h4></h4>
+                                    </div>
+
+                                </main>
+
+                          </div>
+
+
+
+                            <!-- Modal Structure -->
+                    <div id="modal-a" class="modal">
+                        <div class="modal-content">
                             <h4>Modal Header</h4>
                             <p>Please Login Here</p>
+
                         </div>
                         <div class="modal-footer">
-                            <!--<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>-->
-                                    <button data-target="modal1" class="btn modal-trigger">Login</button>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +195,7 @@
         <div class="footer-copyright">
             <div class="container">
                 © 2018 Elevated Thoughts Group
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                <a class="grey-text text-lighten-4 right" href="#!">June 5, 2018</a>
             </div>
         </div>
     </footer>
@@ -165,9 +209,11 @@
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-<script type="text/javascript" src="/assets/main.js"></script>
-<script type="javascript" src="/assets/app.js" ></script>
 <script src="https://cdn.auth0.com/js/auth0/9.5.1/auth0.min.js"></script>
+<script type="text/javascript" src="/assets/main.js"></script>
+
+<!--<script type="text/javascript" src="node_modules/auth0-js/build/auth0.js"></script>-->
+<script type="javascript" src="/assets/app.js" ></script>
 
 </body>
 </html>
