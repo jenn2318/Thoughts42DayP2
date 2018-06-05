@@ -68,11 +68,13 @@ $(document).ready(function() {
                 $("#modelcontent").append(
                     $("<div>").addClass("card blue-grey darken-1").append(
                         $("<div>").addClass("card-content white-text").append(
+
                             $("<span>").addClass("card-title").html(thoughts[i].first_name + " " + thoughts[i].last_name),
                             // ).text(thoughts[i].body).append(
                             $("<p>").text(thoughts[i].date),
                             $("<p>").text(thoughts[i].body)
                         )
+
 
                     )
 
@@ -86,7 +88,7 @@ $(document).ready(function() {
             console.log(thoughts);
 
 
-        })
+         })
 
     });
 
