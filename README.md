@@ -9,9 +9,9 @@ Thoughts42Day is an application created to be a safe interactive space for entre
 # Application Use
 Users can click on the user login to sign into the app or directly bypass and take a look at the live feed of user thought comments, which will allow the option to Like or Comment on other user posts in a collaborative environment. We believe a future version of Thoughts42Day will give the user the option to choose to post 2, 4 or 42, thoughts in a day and highlight the options by color for Creative or Business ideas. An initial feature target we wanted to meet was to have interactive capability, where users can comment on other user posts, and display live feed thought comment activity by users.
 
-![timeline home page](public/assets/images/user_dashbpard.png)
-![timeline home page](public/assets/images/thought_form.png)
-![timeline home page](public/assets/images/thought_timeline.png)
+![user dashboard](public/assets/images/user_dashbpard.jpg)
+![form](public/assets/images/thought_form.jpg)
+![user timeline](public/assets/images/thought_timeline.jpg)
 
 ## Group Members
 Jennifer Ponder
