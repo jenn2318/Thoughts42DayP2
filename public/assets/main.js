@@ -65,7 +65,7 @@ $(document).ready(function() {
                 console.log(thoughts[i])
                 $("#modelcontent").append(
                     $("<div>").addClass("card").append(
-                        $("<h1>").text(thoughts[i].body)
+                        $("<h6>").text(thoughts[i].body)
 
                     )
 
@@ -94,11 +94,7 @@ $(document).ready(function() {
 
 
     $("#thought-submit").on("click", function(event) {
-        console.log("thought-submit clicked");
         event.preventDefault();
-
-        // let newDate =  moment($("#date").val().trim())
-        // console.log("newDate", newDate);
 
         // Make a Thought object
         let newThoughtPost = {
@@ -109,33 +105,13 @@ $(document).ready(function() {
             // date: moment().format("YYYY-MM-DD HH:mm:ss")
         };
 
-        console.log("newThoughtPost", newThoughtPost);
-
         // Send an AJAX POST-request with jQuery
         $.post("/api/thought", newThoughtPost)
 
         // On success, run the following code
             .then(function(response) {
                 console.log(response);
-                let row = $("<div>");
-
-                row.addClass("post");
-                row.prepend("<p>" + newThoughtPost.thought_name + " posted: </p>");
-                row.prepend("<p>" + newThoughtPost.body + "</p>");
-                row.prepend("<p>" + newThoughtPost.date + "</p>");
-                // row.prepend("<p>At " + moment(thought_date.created_at).format("h:mma on dddd") + "</p>");
-
-                $("#modal2-show").prepend(row);
-
-                row.addClass("thought");
-
-                row.append("<p>" + newThoughtPost.thought_name + " thoughts: </p>");
-                row.append("<p>" + newThoughtPost.body + "</p>");
-                row.append("<p>" + newThoughtPost.date + "</p>");
-                // row.append("<p>At " + moment(newThoughtPost.created_at).format("h:mma on dddd") + "</p>");
-
-                $("#thought").prepend(row);
-
+              alert("Entry Saved In Database!");
 
             });
 
