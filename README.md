@@ -55,4 +55,5 @@ Create interactive archive feature for other users to comment on archived though
 Add handlebars or EJS templating to build out the html pages
 Add more users to the database
 Make API calls to business related or creative related websites for thought ideas and emojis
+
 Add Passport.js or Auth0 functionality for user authentication for user sign in with Google 

@@ -40,7 +40,37 @@ $(document).ready(function() {
     $("#modal1").on("click", function() {
         console.log("modal-show");
         $(".modal").show();
+        // $.get("/api/thought").then(function (thoughts) {
+            // $("<div>").addClass("card").append(
+            //     $("<div>").addClass("card-image").append(
+            //
+            //     )
+            // )
+            // console.log(thoughts);
+
+
+        // })
+
+    });
+
+});
+
+$(document).ready(function() {
+    $("#modal02").on("click", function() {
+        console.log("modal-show");
+        $(".modal").show();
         $.get("/api/thought").then(function (thoughts) {
+            console.log("entering loop")
+            for (let i=0; i<thoughts.length; i++) {
+                console.log(thoughts[i])
+                $("#modelcontent").append(
+                    $("<div>").addClass("card").append(
+                        $("<h1>").text(thoughts[i].body)
+
+                    )
+
+                );
+            }
             // $("<div>").addClass("card").append(
             //     $("<div>").addClass("card-image").append(
             //
@@ -54,7 +84,6 @@ $(document).ready(function() {
     });
 
 });
-
 
 //==============================================================
 //Click event that will handle when the user clicks on the Login button
