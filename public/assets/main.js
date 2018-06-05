@@ -64,8 +64,13 @@ $(document).ready(function() {
             for (let i=0; i<thoughts.length; i++) {
                 console.log(thoughts[i])
                 $("#modelcontent").append(
-                    $("<div>").addClass("card").append(
-                        $("<h1>").text(thoughts[i].body)
+                    $("<div>").addClass("card blue-grey darken-1").append(
+                        $("<div>").addClass("card-content white-text").append(
+                        	$("<span>").addClass("card-title").html(thoughts[i].first_name + " " + thoughts[i].last_name),
+                        	// ).text(thoughts[i].body).append(
+                        		$("<p>").text(thoughts[i].date),
+                        		$("<p>").text(thoughts[i].body)                        			
+                        	)
 
                     )
 
