@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 $(document).ready(function(){
     $('.parallax').parallax();
-    $('.modal').modal();
+    // $('.modal').modal();
 });
 
 //==========================================================
