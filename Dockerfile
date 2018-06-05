@@ -1,13 +1,19 @@
 FROM node
 
-WORKDIR /usr/src/thoughts42dayp2
+# Create app directory
+WORKDIR /usr/src/app
 
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
 COPY package*.json ./
 
 RUN npm install
 
+# Bundle app source
 COPY . .
 
-EXPOSE 3000
+# Open the port where your server is running
+EXPOSE 8080
 
+# Start your server
 CMD [ "npm", "start" ]
