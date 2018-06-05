@@ -32,6 +32,14 @@
         #grey-text-small {
             text-align: center !important;
         }
+
+        .container-fluid {
+            background-color: #03a9f4 !important;
+        }
+
+        .navbar-brand {
+          color: #ffd54f; !important;
+        }
     </style>
 </head>
 
@@ -98,9 +106,30 @@
 
                     <!-- Modal Trigger -->
 
-                    <button class="waves-effect waves-light btn modal-trigger" data-target="modal1" >Login</button>
+                    <button class="waves-effect waves-light btn modal-trigger" data-target="modal1" >T42Day Access</button>
 
                     <!-- Modal Structure -->
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <nav class="navbar navbar-default">
+                                <div class="container-fluid">
+                                    <div class="navbar-header">
+                                        <a class="navbar-brand" href="#">Have An Account? Login Here: </a>
+
+                                        <button id="btn-login" class="btn btn-primary btn-margin">
+                                            Log In
+                                        </button>
+
+                                        <button id="btn-logout" class="btn btn-primary btn-margin">
+                                            Log Out
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </nav>
+
+
+                            <!-- Modal Structure -->
                     <div id="modal1" class="modal">
                         <div class="modal-content">
                             <h4>Modal Header</h4>
@@ -108,7 +137,7 @@
                         </div>
                         <div class="modal-footer">
                             <!--<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>-->
-                                    <button data-target="modal1" class="btn modal-trigger">Login</button>
+                                    <!--<button data-target="modal1" class="btn modal-trigger">Login</button>-->
                                 </div>
                             </div>
                         </div>
