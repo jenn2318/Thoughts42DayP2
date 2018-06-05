@@ -40,17 +40,6 @@ $(document).ready(function() {
     $("#modal1").on("click", function() {
         console.log("modal-show");
         $(".modal").show();
-        // $.get("/api/thought").then(function (thoughts) {
-            // $("<div>").addClass("card").append(
-            //     $("<div>").addClass("card-image").append(
-            //
-            //     )
-            // )
-            // console.log(thoughts);
-
-
-        // })
-
     });
 
 });
@@ -68,8 +57,10 @@ $(document).ready(function() {
                 $("#modelcontent").append(
                     $("<div>").addClass("card blue-grey darken-1").append(
                         $("<div>").addClass("card-content white-text").append(
-                        	$("<span>").addClass("card-title").html(thoughts[i].first_name + " " + thoughts[i].last_name),
+                        	$("<span>").addClass("card-title text-center").html(thoughts[i].first_name + " " + thoughts[i].last_name),
                         	// ).text(thoughts[i].body).append(
+                        	$("<div>").addClass("card-image").append(
+                        		$("<img>").css({"height": "50%", "width": "50%"}).attr("src", "/assets/images/userLW.jpeg")),
                         		$("<p>").text(thoughts[i].date),
                         		$("<p>").text(thoughts[i].body)                        			
                         	)
@@ -78,18 +69,8 @@ $(document).ready(function() {
 
                 );
             }
-            // $("<div>").addClass("card").append(
-            //     $("<div>").addClass("card-image").append(
-            //
-            //     )
-            // )
-            console.log(thoughts);
-
-
          })
-
     });
-
 });
 
 //==============================================================
