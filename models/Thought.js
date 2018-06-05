@@ -1,3 +1,7 @@
+// const Sequelize = require("sequelize");
+// const connection = new Sequelize("thoughts_db", "root", "root")
+
+
 module.exports = function(sequelize, DataTypes) {
     let Thought = sequelize.define("Thought", {
         first_name: DataTypes.STRING,
@@ -8,3 +12,6 @@ module.exports = function(sequelize, DataTypes) {
     });
     return Thought;
 };
+
+//Syncs with db
+// Thought.sync();

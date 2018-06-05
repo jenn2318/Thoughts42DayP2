@@ -26,19 +26,30 @@ $(document).ready(function(){
 
 document.addEventListener('DOMContentLoaded', function() {
     let elems = document.querySelectorAll('.modal');
-    let instances = M.Modal.init(elems, options);
+    let instances = M.Modal.init(elems);
 });
 
 // Or with jQuery
 
 
-$(document).ready(function(){
-    $('.modal').modal();
-});
+// $(document).ready(function(){
+//     $('.modal').modal();
+// });
 
 $(document).ready(function() {
     $("#modal1").on("click", function() {
+        console.log("modal-show");
         $(".modal").show();
+        $.get("/api/thought").then(function (thoughts) {
+            // $("<div>").addClass("card").append(
+            //     $("<div>").addClass("card-image").append(
+            //
+            //     )
+            // )
+            console.log(thoughts);
+
+
+        })
 
     });
 
@@ -57,9 +68,11 @@ $(document).ready(function() {
         console.log("thought-submit clicked");
         event.preventDefault();
 
+        // let newDate =  moment($("#date").val().trim())
+        // console.log("newDate", newDate);
 
         // Make a Thought object
-        let newThought = {
+        let newThoughtPost = {
             first_name: $("#first_name").val().trim(),
             last_name: $("#last_name").val().trim(),
             body: $("#body").val().trim(),
@@ -67,10 +80,10 @@ $(document).ready(function() {
             // date: moment().format("YYYY-MM-DD HH:mm:ss")
         };
 
-        console.log(newThought);
+        console.log("newThoughtPost", newThoughtPost);
 
         // Send an AJAX POST-request with jQuery
-        $.post("/api/thought", newThought)
+        $.post("/api/thought", newThoughtPost)
 
         // On success, run the following code
             .then(function(response) {
@@ -78,17 +91,19 @@ $(document).ready(function() {
                 let row = $("<div>");
 
                 row.addClass("post");
-                 row.preppend("<p>" + newThoughtPost.thought_name + " posted: </p>");
+                 row.prepend("<p>" + newThoughtPost.thought_name + " posted: </p>");
                  row.prepend("<p>" + newThoughtPost.body + "</p>");
-                 row.prepend("<p>At " + moment(thought_date.created_at).format("h:mma on dddd") + "</p>");
+                row.prepend("<p>" + newThoughtPost.date + "</p>");
+                 // row.prepend("<p>At " + moment(thought_date.created_at).format("h:mma on dddd") + "</p>");
 
                  $("#modal2-show").prepend(row);
 
                  row.addClass("thought");
 
-                 row.append("<p>" + newThought.author + " thoughts: </p>");
-                 row.append("<p>" + newThought.body + "</p>");
-                 row.append("<p>At " + moment(newThought.created_at).format("h:mma on dddd") + "</p>");
+                 row.append("<p>" + newThoughtPost.thought_name + " thoughts: </p>");
+                 row.append("<p>" + newThoughtPost.body + "</p>");
+                 row.append("<p>" + newThoughtPost.date + "</p>");
+                 // row.append("<p>At " + moment(newThoughtPost.created_at).format("h:mma on dddd") + "</p>");
 
                 $("#thought").prepend(row);
 
