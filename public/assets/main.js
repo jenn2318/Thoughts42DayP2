@@ -41,12 +41,12 @@ $(document).ready(function() {
         console.log("modal-show");
         $(".modal").show();
         // $.get("/api/thought").then(function (thoughts) {
-            // $("<div>").addClass("card").append(
-            //     $("<div>").addClass("card-image").append(
-            //
-            //     )
-            // )
-            // console.log(thoughts);
+        // $("<div>").addClass("card").append(
+        //     $("<div>").addClass("card-image").append(
+        //
+        //     )
+        // )
+        // console.log(thoughts);
 
 
         // })
@@ -68,11 +68,13 @@ $(document).ready(function() {
                 $("#modelcontent").append(
                     $("<div>").addClass("card blue-grey darken-1").append(
                         $("<div>").addClass("card-content white-text").append(
-                        	$("<span>").addClass("card-title").html(thoughts[i].first_name + " " + thoughts[i].last_name),
-                        	// ).text(thoughts[i].body).append(
-                        		$("<p>").text(thoughts[i].date),
-                        		$("<p>").text(thoughts[i].body)                        			
-                        	)
+
+                            $("<span>").addClass("card-title").html(thoughts[i].first_name + " " + thoughts[i].last_name),
+                            // ).text(thoughts[i].body).append(
+                            $("<p>").text(thoughts[i].date),
+                            $("<p>").text(thoughts[i].body)
+                        )
+
 
                     )
 
@@ -124,29 +126,29 @@ $(document).ready(function() {
         // On success, run the following code
             .then(function(response) {
                 console.log(response);
-                let row = $("<div>");
-
-                row.addClass("post");
-                 row.prepend("<p>" + newThoughtPost.thought_name + " posted: </p>");
-                 row.prepend("<p>" + newThoughtPost.body + "</p>");
-                row.prepend("<p>" + newThoughtPost.date + "</p>");
-                 // row.prepend("<p>At " + moment(thought_date.created_at).format("h:mma on dddd") + "</p>");
-
-                 $("#modal2-show").prepend(row);
-
-                 row.addClass("thought");
-
-                 row.append("<p>" + newThoughtPost.thought_name + " thoughts: </p>");
-                 row.append("<p>" + newThoughtPost.body + "</p>");
-                 row.append("<p>" + newThoughtPost.date + "</p>");
-                 // row.append("<p>At " + moment(newThoughtPost.created_at).format("h:mma on dddd") + "</p>");
-
-                $("#thought").prepend(row);
+                // let row = $("<div>");
+                //
+                // row.addClass("post");
+                // row.prepend("<p>" + newThoughtPost.thought_name + " posted: </p>");
+                // row.prepend("<p>" + newThoughtPost.body + "</p>");
+                // row.prepend("<p>" + newThoughtPost.date + "</p>");
+                // // row.prepend("<p>At " + moment(thought_date.created_at).format("h:mma on dddd") + "</p>");
+                //
+                // $("#modal2-show").prepend(row);
+                //
+                // row.addClass("thought");
+                //
+                // row.append("<p>" + newThoughtPost.thought_name + " thoughts: </p>");
+                // row.append("<p>" + newThoughtPost.body + "</p>");
+                // row.append("<p>" + newThoughtPost.date + "</p>");
+                // // row.append("<p>At " + moment(newThoughtPost.created_at).format("h:mma on dddd") + "</p>");
+                //
+                // $("#thought").prepend(row);
 
 
             });
 
-         //Empty each input box by replacing the value with an empty string
+        //Empty each input box by replacing the value with an empty string
 
         document.getElementById("myForm").reset();
 
