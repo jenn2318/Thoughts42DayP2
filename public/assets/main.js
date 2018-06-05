@@ -126,6 +126,7 @@ $(document).ready(function() {
         // On success, run the following code
             .then(function(response) {
                 console.log(response);
+                alert("Post Submitted Successfully!");
                 // let row = $("<div>");
                 //
                 // row.addClass("post");
