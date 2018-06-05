@@ -1,4 +1,4 @@
-//Materialize code for the Parallax
+/Materialize code for the Parallax
 $(document).ready(function(){
     $('.parallax').parallax();
 });
@@ -44,7 +44,7 @@ $(document).ready(function() {
 // click listeners for login page
 // insert code
     // $("#btn-login").on("click", function() {
-    // 	console.log("button log clicked")
+    //     console.log("button log clicked")
 // });
 
 
@@ -199,4 +199,3 @@ $(document).ready(function() {
 //
 //
 //     }
-//
