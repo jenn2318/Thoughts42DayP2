@@ -6,6 +6,8 @@ module.exports = function(app) {
 
     app.get("/api/user/", controller.getUsers);
 
+    app.get("api/thought", controller.getThought);
+
     app.post("/api/user", controller.createUser);
 
     app.post("/api/thought", controller.createThought);
