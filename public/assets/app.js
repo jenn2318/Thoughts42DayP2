@@ -13,6 +13,7 @@ window.addEventListener('load', function() {
     var loginBtn = document.getElementById('btn-login');
 
     loginBtn.addEventListener('click', function(e) {
+        console.log("login button clicked");
         e.preventDefault();
         webAuth.authorize();
     });

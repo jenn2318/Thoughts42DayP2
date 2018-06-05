@@ -37,10 +37,19 @@ document.addEventListener('DOMContentLoaded', function() {
 // });
 
 $(document).ready(function() {
-    $("#modal1").on("click", function() {
-        console.log("modal-show");
-        $(".modal").show();
-    });
+    // $("#modal1").on("click", function() {
+    //     console.log("modal-show");
+    //     $(".modal").show();
+    // });
+// click listeners for login page
+// insert code
+    // $("#btn-login").on("click", function() {
+    // 	console.log("button log clicked")
+// });
+
+
+
+
 
 });
 
