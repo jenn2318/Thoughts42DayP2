@@ -1,3 +1,4 @@
+
 window.addEventListener('load', function() {
 
     var webAuth = new auth0.WebAuth({

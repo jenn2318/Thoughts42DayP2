@@ -20,7 +20,6 @@ Sequelize
 Handlebars
 Docker
 
-
 # Development Process
 1. Concept
 
@@ -31,7 +30,7 @@ Docker
 4. Future Additions
 
 ## 1. Concept
-The concept came about after brainstorming on idea of an interactive thought tank, where a user would be able to post their thoughts and not be subjected to negative or harmful feedback, which has been experienced at a rapid rate in mainstream social media sites today. While brainstorming the type of information that users would be able to store, we decided that providing busy entreprenuers, that are always on the go, with a faster way to jot down business venture thoughts or ideas within an environment that offers a safe space for collaboration would be a great way to bring a resolution to this massive problem.
+The concept came about after brainstorming on idea of an interactive thought tank, where a user would be able to post their thoughts and not be subjected to negative or harmful feedback, which has been experienced at a rapid rate in mainstream social media sites today. While brainstorming the type of information that users would be able to store, we decided that providing busy entrepreneurs, that are always on the go, with a faster way to jot down business venture thoughts or ideas within an environment that offers a safe space for collaboration would be a great way to bring a resolution to this massive problem.
 
 ## 2. Initial Planning
 
@@ -56,4 +55,5 @@ Create interactive archive feature for other users to comment on archived though
 Add handlebars or EJS templating to build out the html pages
 Add more users to the database
 Make API calls to business related or creative related websites for thought ideas and emojis
-Add Passport.js functionality for user authentication for user sign in with Google 
+
+Add Passport.js or Auth0 functionality for user authentication for user sign in with Google 
