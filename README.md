@@ -21,11 +21,14 @@ Joe Kim
 ## Tech Stack Used
 
 JavaScript ES6
+Node.js
+Express.js
 jQuery 3.3.1
 HTML5/CSS
 Materialize
 Sequelize
 Docker
+
 
 # Development Process
 1. Concept
